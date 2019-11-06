@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ "$IFTOP" != "" ] ; then
+  $IFTOP $*
+else
+  /usr/sbin/iftop $*
+fi

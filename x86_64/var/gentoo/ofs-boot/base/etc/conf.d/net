@@ -1,0 +1,5 @@
+#modules_eth0="!netplugd"
+config_eth0="192.168.10.10/24"
+
+#modules_wlan0="!iw !iwconfig !wpa_supplicant"
+#config_wlan0="192.168.100.10/24"

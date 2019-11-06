@@ -1,0 +1,12 @@
+diff -Naur splashutils-1.5.4.4/src/libfbsplashrender.c splashutils-1.5.4.4-m/src/libfbsplashrender.c
+--- splashutils-1.5.4.4/src/libfbsplashrender.c	2011-06-13 00:43:39.000000000 +0300
++++ splashutils-1.5.4.4-m/src/libfbsplashrender.c	2018-09-03 10:09:55.973998569 +0300
+@@ -650,7 +650,7 @@
+ 	w.c_cc[VTIME] = 0;
+ 	w.c_cc[VMIN] = 1;
+ 	tcsetattr(fd, TCSANOW, &w);
+-	vt_cursor_enable(fd);
++//	vt_cursor_enable(fd);
+ 
+ 	return 0;
+ }

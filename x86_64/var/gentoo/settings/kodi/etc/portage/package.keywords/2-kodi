@@ -1,0 +1,13 @@
+media-tv/kodi ~amd64
+media-plugins/kodi-* ~amd64
+media-libs/kodi-platform ~amd64
+dev-libs/libplatform ~amd64
+
+media-tv/tvheadend ~amd64
+net-misc/streamlink ~amd64
+
+=media-libs/libprojectm-3.1.0-r1 ~amd64
+=dev-libs/rapidxml-1.13-r1 ~amd64
+
+#streamlink
+=dev-python/backports-shutil_which-3.5.1 ~amd64

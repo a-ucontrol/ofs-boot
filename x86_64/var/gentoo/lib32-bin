@@ -1,0 +1,23 @@
+#!/bin/bash
+
+. /var/gentoo/version
+
+P=/var/gentoo
+
+emerge --unmerge lib-x86_32-bin wine-staging
+
+cd $P
+mkdir -p $P/lib32/include
+cp -r $P/minimal-sys/usr/lib lib32/
+cp -r $P/minimal-sys/usr/include/i686* lib32/include/
+cd /usr/lib
+L=$(find)
+cd $P/lib32/lib
+rm -r wine-staging*
+echo "$L" | xargs rm 2>/dev/null
+echo "$L" | xargs rmdir -p 2>/dev/null
+cd ..
+tar -c . > ../lib-x86_32-bin-$V$R.tar
+xz -9 -T0 -v ../lib-x86_32-bin-$V$R.tar
+cd $P
+rm $P/lib32 -r

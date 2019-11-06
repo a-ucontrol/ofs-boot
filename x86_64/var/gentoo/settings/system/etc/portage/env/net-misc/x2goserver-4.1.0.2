@@ -1,0 +1,5 @@
+post_src_install() {
+echo "Start post_src_install..."
+mkdir ../../image/usr/lib
+ln -s /usr/lib64/x2go ../../image/usr/lib/x2go
+}

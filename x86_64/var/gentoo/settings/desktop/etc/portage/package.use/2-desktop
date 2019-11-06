@@ -1,0 +1,14 @@
+#kmail
+kde-apps/akonadi sqlite tools
+kde-apps/kdepim-addons google
+kde-apps/kdepim-runtime google
+#elisa
+dev-qt/qtmultimedia gstreamer
+#libreoffice
+dev-libs/xmlsec nss
+#chromium
+net-libs/nodejs inspector
+
+app-emulation/virtualbox vnc
+net-misc/networkmanager -bluetooth -modemmanager
+kde-apps/krdc vnc

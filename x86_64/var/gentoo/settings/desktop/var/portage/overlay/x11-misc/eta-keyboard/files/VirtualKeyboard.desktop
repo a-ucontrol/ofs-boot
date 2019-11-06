@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=Utility;
+Comment=
+Exec=/usr/bin/vkeyboard
+Icon=preferences-desktop-keyboard
+Name=Virtual Keyboard
+NoDisplay=false
+StartupNotify=false
+Terminal=false
+Type=Application

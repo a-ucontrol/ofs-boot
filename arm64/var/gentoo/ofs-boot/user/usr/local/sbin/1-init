@@ -1,0 +1,13 @@
+rc-update del netmount default
+chown polkitd:root $DIR/etc/polkit-1/rules.d -R
+
+if [ "$(cat /etc/passwd | grep "^user:x:")" == "" ] ; then
+useradd -M user
+c_p user user
+ug="wheel usb audio video plugdev xpra lpadmin"
+for g in $ug ; do
+gpasswd $g -a user
+done
+fi
+
+[ -f /usr/local/sbin/2-init ] && . /usr/local/sbin/2-init

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+c_p(){
+echo "$2
+$2" | passwd $1 2> /dev/null
+}
+
+mount -o remount,rw /
+
+c_p root root
+if [ "$(cat /etc/rc.conf | grep "/run/ofs/mount /lib64/splash/cache")" == "" ] ; then
+echo "RC_NO_UMOUNTS=\"/run/ofs/mount /lib64/splash/cache\"" >> /etc/rc.conf
+echo "rc_depend_strict=\"NO\"" >> /etc/rc.conf
+echo "rc_provide=\"net\"" >> /etc/rc.conf
+fi
+
+[ -f /usr/local/sbin/1-init ] && . /usr/local/sbin/1-init
+
+rm /usr/local/sbin/?-init

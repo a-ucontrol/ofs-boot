@@ -1,0 +1,6 @@
+>=dev-ruby/minitest-5
+>=virtual/rubygems-14
+>dev-ruby/rake-12.1.0
+>dev-ruby/power_assert-1.1.0
+>dev-ruby/test_unit-3.2.6
+>dev-ruby/test-unit-3.2.6

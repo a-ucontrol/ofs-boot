@@ -1,0 +1,15 @@
+app-emulation/virtualbox-extpack-oracle PUEL
+www-plugins/chrome-binary-plugins google-chrome
+
+# required by @selected
+# required by @world (argument)
+>=media-fonts/corefonts-1-r7 MSttfEULA
+# required by @selected
+# required by @world (argument)
+=sys-kernel/linux-firmware-20190514 linux-fw-redistributable no-source-code
+# required by @selected
+# required by @world (argument)
+>=app-arch/unrar-5.7.4 unRAR
+# required by @selected
+# required by @world (argument)
+>=net-wireless/broadcom-sta-6.30.223.271-r4 Broadcom

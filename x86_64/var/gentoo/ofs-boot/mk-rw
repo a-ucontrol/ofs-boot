@@ -1,0 +1,20 @@
+#!/bin/bash
+
+[ "$RW_SIZE" == "" ] && RW_SIZE=128M
+
+BP=$(echo "$0" | sed s/$(basename $0)//)
+
+DIR=$PWD/rw
+
+[ -f "$DIR/rw-overlay.loop" ] &&  echo "File sxist! Renaming..." && sleep 5 && mv $DIR/rw-overlay.loop $DIR/rw-overlay.loop- || mkdir -p $DIR
+
+dd if=/dev/zero of=$DIR/rw-overlay.loop bs=$RW_SIZE count=1
+mkfs.ext4 -O ^has_journal $DIR/rw-overlay.loop
+
+if [ -f ./rw.include ] ; then
+mount $DIR/rw-overlay.loop $DIR
+RWDIR=$DIR/ud
+mkdir $RWDIR
+. ./rw.include
+umount $DIR
+fi

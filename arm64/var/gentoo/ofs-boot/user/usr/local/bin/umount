@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ "$UMOUNT" == "" ] ; then
+  /bin/umount $*
+else
+  $UMOUNT $*
+fi

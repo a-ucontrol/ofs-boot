@@ -1,0 +1,19 @@
+diff -Naur tvheadend-tvheadend-b17dcf9/src/input/mpegts/mpegts_service.c tvheadend-tvheadend-b17dcf9-m/src/input/mpegts/mpegts_service.c
+--- tvheadend-tvheadend-b17dcf9/src/input/mpegts/mpegts_service.c	2018-12-28 23:21:36.000000000 +0300
++++ tvheadend-tvheadend-b17dcf9-m/src/input/mpegts/mpegts_service.c	2018-12-29 10:18:32.430051791 +0300
+@@ -551,6 +551,7 @@
+ static const char *
+ mpegts_service_source ( service_t *s )
+ {
++#if ENABLE_MPEGTS_DVB
+   mpegts_service_t *ms = (mpegts_service_t*)s;
+   const idclass_t *mux_idc = ms->s_dvb_mux->mm_id.in_class;
+   if (mux_idc == &dvb_mux_dvbs_class)   return "DVB-S";
+@@ -563,6 +564,7 @@
+   if (mux_idc == &dvb_mux_isdb_s_class) return "ISDB-S";
+   if (mux_idc == &dvb_mux_dtmb_class)   return "DTMB";
+   if (mux_idc == &dvb_mux_dab_class)    return "DAB";
++#endif
+   return NULL;
+ }
+ 

@@ -1,0 +1,17 @@
+diff -Naur tvheadend-4.2.4/src/input/mpegts/dvb_psi.c tvheadend-4.2.4-m/src/input/mpegts/dvb_psi.c
+--- tvheadend-4.2.4/src/input/mpegts/dvb_psi.c	2017-10-18 13:39:58.000000000 +0000
++++ tvheadend-4.2.4-m/src/input/mpegts/dvb_psi.c	2018-01-13 23:56:02.446548609 +0000
+@@ -2795,11 +2795,13 @@
+     psi_tables_atsc_t(mm);
+     break;
+   case DVB_SYS_DVBC_ANNEX_B:
++#if ENABLE_MPEGTS_DVB
+     if (idnode_is_instance(&mm->mm_id, &dvb_mux_dvbc_class))
+       psi_tables_dvb(mm);
+     else
+       psi_tables_atsc_c(mm);
+     break;
++#endif
+   case DVB_SYS_NONE:
+   case DVB_SYS_DVBH:
+   case DVB_SYS_DTMB:

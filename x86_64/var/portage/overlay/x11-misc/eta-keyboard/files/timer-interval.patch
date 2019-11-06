@@ -1,0 +1,12 @@
+diff -Naur eta-keyboard-debian-0.3.3/ui/CapsLockKey.qml eta-keyboard-debian-0.3.3-m/ui/CapsLockKey.qml
+--- eta-keyboard-debian-0.3.3/ui/CapsLockKey.qml	2017-12-05 16:39:14.000000000 +0300
++++ eta-keyboard-debian-0.3.3-m/ui/CapsLockKey.qml	2018-03-22 05:24:58.760467041 +0300
+@@ -81,7 +81,7 @@
+     Timer {
+         running: true
+         repeat: true
+-        interval: 5
++        interval: 500
+         onTriggered: {
+             key.clickedFlag = helper.getCapslockStatus();
+         }

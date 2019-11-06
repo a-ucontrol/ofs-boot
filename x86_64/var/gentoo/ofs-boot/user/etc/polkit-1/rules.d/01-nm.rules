@@ -1,0 +1,25 @@
+polkit.addRule(function(action, subject) {
+  var YES = polkit.Result.YES;
+  var permission = {
+ "org.freedesktop.NetworkManager.checkpoint-rollback": YES,
+ "org.freedesktop.NetworkManager.enable-disable-connectivity-check": YES,
+ "org.freedesktop.NetworkManager.enable-disable-network": YES,
+ "org.freedesktop.NetworkManager.enable-disable-statistics": YES,
+ "org.freedesktop.NetworkManager.enable-disable-wifi": YES,
+ "org.freedesktop.NetworkManager.enable-disable-wimax": YES,
+ "org.freedesktop.NetworkManager.enable-disable-wwan": YES,
+ "org.freedesktop.NetworkManager.network-control": YES,
+ "org.freedesktop.NetworkManager.reload": YES,
+ "org.freedesktop.NetworkManager.settings.modify.global-dns": YES,
+ "org.freedesktop.NetworkManager.settings.modify.hostname": YES,
+ "org.freedesktop.NetworkManager.settings.modify.own": YES,
+ "org.freedesktop.NetworkManager.settings.modify.system": YES,
+ "org.freedesktop.NetworkManager.sleep-wake": YES,
+ "org.freedesktop.NetworkManager.wifi.scan": YES,
+ "org.freedesktop.NetworkManager.wifi.share.open": YES,
+ "org.freedesktop.NetworkManager.wifi.share.protected": YES,
+  };
+  if (subject.isInGroup("plugdev")) {
+    return permission[action.id];
+  }
+});

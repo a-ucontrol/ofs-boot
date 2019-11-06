@@ -1,0 +1,9 @@
+#kodi
+media-video/ffmpeg openssl
+
+media-gfx/splashutils fbcondecor
+sys-kernel/genkernel -firmware
+media-video/ffmpeg libdrm libv4l
+media-plugins/alsa-plugins pulseaudio
+media-sound/pulseaudio equalizer
+media-video/mpv -cdda drm gbm

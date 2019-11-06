@@ -1,0 +1,21 @@
+#!/bin/bash
+
+. /var/gentoo/version
+
+ecroot="/var/gentoo/system-gentoo"
+
+mount /dev/ ${ecroot}/dev/ --bind -o ro
+mount -t devpts none ${ecroot}/dev/pts -o gid=5
+mount -o loop /var/gentoo/portage-$P.squashfs ${ecroot}/usr/portage
+mount --bind /var/portage/packages ${ecroot}/var/portage/packages -o ro
+mount -t proc none ${ecroot}/proc -o ro
+mount -t tmpfs none ${ecroot}/run
+
+LC_ALL=C chroot ${ecroot} $*
+
+umount ${ecroot}/dev/pts
+umount ${ecroot}/dev
+umount ${ecroot}/usr/portage
+umount ${ecroot}/var/portage/packages
+umount ${ecroot}/proc
+umount ${ecroot}/run

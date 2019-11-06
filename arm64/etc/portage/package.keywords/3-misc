@@ -1,0 +1,6 @@
+<sys-block/zram-init-9999 ~arm64
+<media-sound/bluez-alsa-9999 **
+<net-analyzer/iftop-9999999 **
+
+=app-eselect/eselect-timezone-0.2 ~arm64
+=sys-power/powertop-2.10 ~arm64

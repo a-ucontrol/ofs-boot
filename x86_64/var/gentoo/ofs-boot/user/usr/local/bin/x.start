@@ -1,0 +1,11 @@
+#!/bin/bash
+
+. /usr/local/etc/local.conf
+
+process()
+{
+  su $X_USER -c "startx -- vt7"
+  $X_END
+}
+
+process > /dev/null 2>&1 &

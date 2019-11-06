@@ -1,0 +1,5 @@
+#!/bin/bash
+
+killall -w x.start
+killall X
+exit 0

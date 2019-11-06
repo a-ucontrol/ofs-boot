@@ -1,0 +1,7 @@
+#!/bin/bash
+
+. /var/gentoo/version
+
+echo "packages"
+mksquashfs  /var/portage/packages packages-$V$R.squashfs -b 1M -comp xz
+chmod 0644 packages-$V$R.squashfs

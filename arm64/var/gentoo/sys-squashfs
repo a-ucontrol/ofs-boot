@@ -1,0 +1,13 @@
+#!/bin/bash
+
+PREFIX="/var/gentoo/arm64"
+
+. $PREFIX/var/gentoo/version
+
+./chroot-cross-system rm -rf /var/log/emerge* /var/log/portage/elog/summary.log /root
+./chroot-cross-system eix-update
+./chroot-cross-system etc-update
+./chroot-cross-system env-update
+
+mksquashfs $PREFIX/var/gentoo/system-arm64-gentoo $PREFIX/var/gentoo/system-arm64-gentoo$SV-$V$R.squashfs -b 1M -comp lz4
+chmod 0644 $PREFIX/var/gentoo/system-arm64-gentoo$SV-$V$R.squashfs

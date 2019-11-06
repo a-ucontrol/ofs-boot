@@ -1,0 +1,7 @@
+#!/bin/bash
+
+. /var/gentoo/version
+
+mksquashfs system-gentoo /var/gentoo/system-gentoo$SV-$V$R.squashfs -b 1M -comp xz -Xdict-size 100% -Xbcj x86
+# lz4 -Xhc
+chmod 0644 /var/gentoo/system-gentoo$SV-$V$R.squashfs

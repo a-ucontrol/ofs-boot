@@ -1,0 +1,9 @@
+#!/bin/bash
+
+CP=$PWD
+
+kernel-build kernel
+[ "$1" == "nm" ] && P="--no-ramdisk-modules initramfs" || P="initramfs"
+kernel-build "$P"
+
+cd $CP

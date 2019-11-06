@@ -1,0 +1,12 @@
+#!/bin/sh
+
+modprobe i915
+
+export BOOT_MSG="Welcome!!!"
+/sbin/fbcondecor_helper 2 'init'
+
+[ -f /usr/local/sbin/0-init ] && /usr/local/sbin/0-init
+
+echo 1 > /proc/sys/kernel/printk
+
+exec /sbin/init "$*"

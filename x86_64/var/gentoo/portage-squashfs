@@ -1,0 +1,6 @@
+#!/bin/bash
+
+. /var/gentoo/version
+
+mksquashfs /usr/portage /var/gentoo/portage-$P.squashfs -b 1M -comp xz
+chmod 0644 /var/gentoo/portage-$P.squashfs

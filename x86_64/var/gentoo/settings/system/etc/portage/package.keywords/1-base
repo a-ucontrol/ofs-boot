@@ -1,0 +1,8 @@
+kde-frameworks/* ~amd64
+kde-plasma/* ~amd64
+kde-apps/* ~amd64
+
+media-gfx/splash-themes-livedvd ~amd64
+app-admin/clog ~amd64
+
+=app-dicts/myspell-ru-20150711-r2 ~amd64

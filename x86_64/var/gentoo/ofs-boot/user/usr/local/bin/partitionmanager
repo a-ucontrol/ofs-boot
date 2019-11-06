@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export XDG_CURRENT_DESKTOP=KDE
+/usr/bin/partitionmanager $*

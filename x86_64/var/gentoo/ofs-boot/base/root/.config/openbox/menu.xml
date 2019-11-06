@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu>
+  <menu id="root-menu" label="Menu">
+    <item label="Terminal"><action name="Execute"><execute>konsole</execute></action></item>
+    <item label="Exit"><action name="Exit"/></item>
+  </menu>
+</openbox_menu>

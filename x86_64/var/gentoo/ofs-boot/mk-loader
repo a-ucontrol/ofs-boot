@@ -1,0 +1,9 @@
+#!/bin/bash
+
+BP=$(echo "$0" | sed s/$(basename $0)//)
+
+[ -d ./efi/boot ] && echo "Directory (./efi/boot) exist!" && exit 0
+
+mkdir -p ./efi/boot
+
+grub-mkstandalone --format x86_64-efi -o ./efi/boot/bootx64.efi --compress=xz /boot/grub/grub.cfg=$BP/loader/boot-grub.cfg

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+P=$*
+
+[ "$P" == "all" ] && rm -rf /lib/modules/* /boot/*
+[ "$P" == "kernel" ] && rm -rf /lib/modules/* /boot/*
+[ "$P" == "initramfs-nm" ] && P="--no-ramdisk-modules initramfs"
+genkernel --arch-override=arm64 --makeopts=-j7 --no-keymap --no-zfs --no-btrfs --menuconfig --no-mrproper --no-clean --initramfs-overlay=/usr/src/initramfs $P

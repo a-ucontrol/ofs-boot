@@ -1,0 +1,50 @@
+<media-plugins/kodi-visualization-projectm-9999 **
+<media-plugins/kodi-pvr-hts-9999 **
+<media-tv/kodi-9999 **
+<media-plugins/kodi-pvr-iptvsimple-9999 **
+<media-tv/tvheadend-9999 **
+<net-misc/streamlink-9999 **
+
+# required by media-tv/kodi-18.3-r1::gentoo
+# required by kodi (argument)
+=media-fonts/roboto-2.138 ~arm64
+# required by media-tv/kodi-18.3-r1::gentoo
+# required by kodi (argument)
+<dev-libs/libfmt-9999 **
+# required by media-tv/kodi-18.3-r1::gentoo
+# required by kodi (argument)
+=dev-libs/crossguid-0_pre20150817 **
+# required by media-tv/kodi-18.3-r1::gentoo
+# required by kodi (argument)
+=dev-libs/flatbuffers-1.11.0 **
+# required by dev-libs/libcec-4.0.4-r1::gentoo
+# required by media-tv/kodi-18.3-r1::gentoo[cec]
+# required by kodi (argument)
+<dev-libs/libplatform-9999 **
+# required by media-tv/kodi-18.3-r1::gentoo
+# required by kodi (argument)
+<dev-libs/rapidjson-9999 **
+# required by media-tv/kodi-18.3-r1::gentoo[cec]
+# required by kodi (argument)
+=dev-libs/libcec-4.0.4-r1 **
+# required by media-tv/kodi-18.3-r1::gentoo
+# required by kodi (argument)
+=dev-libs/libfstrcmp-0.7 **
+# required by net-misc/streamlink-1.1.1::gentoo
+# required by streamlink (argument)
+=dev-python/websocket-client-0.48.0 ~arm64
+# required by net-misc/streamlink-1.1.1::gentoo
+# required by streamlink (argument)
+=dev-python/pycryptodome-3.8.2 ~arm64
+# required by net-misc/streamlink-1.1.1::gentoo
+# required by streamlink (argument)
+=dev-python/pycountry-18.5.26 **
+# required by media-plugins/kodi-visualization-projectm-2.2.0::gentoo
+# required by kodi-visualization-projectm (argument)
+=media-libs/libprojectm-3.1.0-r1 ~arm64
+# required by media-plugins/kodi-visualization-projectm-2.2.0::gentoo
+# required by kodi-visualization-projectm (argument)
+=media-libs/kodi-platform-18.0_pre20190429 **
+# required by media-plugins/kodi-pvr-iptvsimple-3.7.2::gentoo
+# required by kodi-pvr-iptvsimple (argument)
+=dev-libs/rapidxml-1.13-r1 **
