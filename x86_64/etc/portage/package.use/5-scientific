@@ -1,0 +1,13 @@
+sci-electronics/kicad examples
+
+#kicad
+dev-libs/boost context python
+x11-libs/wxGTK gstreamer
+
+#freecad
+sci-libs/hdf5 unsupported
+sci-libs/med python
+sci-libs/vtk boost python
+media-libs/tiff zstd lzma
+sci-libs/opencascade vtk json
+dev-python/pyside2 webengine

@@ -1,19 +1,18 @@
-[ -f $HOME/.xinitrc.sh ] && . $HOME/.xinitrc.sh
-
-. $HOME/.bashrc
-source /etc/profile
+source $HOME/.bashrc
 
 #export PULSE_LATENCY_MSEC=100
+#pactl load-module module-dbus-protocol
+#pactl load-module module-equalizer-sink
 
-export LIBGL_DRI3_DISABLE=1
-
-setxkbmap -model pc105 -layout us,ru,ua -variant ,winkeys,winkeys -option grp:ctrl_shift_toggle
-compton --vsync opengl --backend glx -b
+setxkbmap -model pc105 -layout us,ru -variant ,winkeys,winkeys -option grp:alt_shift_toggle
+#picom --vsync opengl --backend glx -b
 #xsetroot -solid "#aaaaaa"
+
+#exec xterm
 
 export XDG_CURRENT_DESKTOP=KDE
 export PARTITIONMANAGER="sudo /usr/bin/partitionmanager"
 export XCURSOR_THEME=breeze_cursors
 
 tint2 &
-exec ck-launch-session openbox-session
+exec openbox-session

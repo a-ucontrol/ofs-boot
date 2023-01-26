@@ -1,15 +1,21 @@
-app-emulation/virtualbox-extpack-oracle PUEL
-www-plugins/chrome-binary-plugins google-chrome
+#kicad-meta
+sci-visualization/xgraph xgraph
 
-# required by @selected
-# required by @world (argument)
->=media-fonts/corefonts-1-r7 MSttfEULA
-# required by @selected
-# required by @world (argument)
-=sys-kernel/linux-firmware-20190514 linux-fw-redistributable no-source-code
-# required by @selected
-# required by @world (argument)
->=app-arch/unrar-5.7.4 unRAR
-# required by @selected
-# required by @world (argument)
->=net-wireless/broadcom-sta-6.30.223.271-r4 Broadcom
+sys-kernel/linux-firmware linux-fw-redistributable no-source-code
+app-emulation/virtualbox-extpack-oracle PUEL-11
+www-plugins/chrome-binary-plugins google-chrome
+app-arch/unrar unRAR
+media-fonts/corefonts MSttfEULA
+games-fps/unigine-heaven as-is
+games-fps/unigine-tropics as-is
+games-fps/gzdoom Activision ChexQuest3 DOOM-COLLECTORS-EDITION WidePix freedist
+net-misc/teamviewer TeamViewer
+net-im/skypeforlinux Skype-TOS
+app-arch/p7zip unRAR
+net-analyzer/nmap NPSL
+net-misc/anydesk AnyDesk-TOS
+app-editors/vscode Microsoft-vscode
+net-misc/asterisk-opus Digium
+net-misc/asterisk-g729 Digium
+media-libs/libva-intel-media-driver no-source-code
+net-misc/mrouted Stanford

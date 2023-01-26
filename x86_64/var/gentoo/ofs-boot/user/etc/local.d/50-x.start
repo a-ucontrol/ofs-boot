@@ -1,1 +1,0 @@
-[ "$(cat /proc/cmdline | grep nox)" == "" ] && /usr/local/bin/x.start

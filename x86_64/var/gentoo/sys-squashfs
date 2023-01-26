@@ -1,7 +1,20 @@
 #!/bin/bash
 
-. /var/gentoo/version
+. ./env
+. $SYS_PREFIX/var/gentoo/version
 
-mksquashfs system-gentoo /var/gentoo/system-gentoo$SV-$V$R.squashfs -b 1M -comp xz -Xdict-size 100% -Xbcj x86
-# lz4 -Xhc
-chmod 0644 /var/gentoo/system-gentoo$SV-$V$R.squashfs
+#./chroot-cross-system rm -rf /var/log/emerge* /var/log/portage/elog/summary.log /root
+#./chroot-cross-system etc-update
+#./chroot-cross-system env-update
+
+[ -f $SYS_PREFIX/usr/bin/eix-update ] && ./chroot-cross-system eix-update
+
+#mksquashfs $SYS_PREFIX/var/gentoo/system-gentoo $SYS_PREFIX/var/gentoo/system-gentoo-$A$SV-$V$R.squashfs -noI -noD -noF -noX
+
+#mksquashfs $SYS_PREFIX/var/gentoo/system-gentoo $SYS_PREFIX/var/gentoo/system-gentoo-$A$SV-$V$R.zstd.squashfs -comp zstd
+
+mksquashfs $SYS_PREFIX/var/gentoo/system-gentoo $SYS_PREFIX/var/gentoo/system-gentoo-$A$SV-$V$R.squashfs -b 1M -comp xz -Xbcj x86
+
+#chmod 0644 $SYS_PREFIX/var/gentoo/system-gentoo-$A$SV-$V$R.zstd.squashfs
+
+chmod 0644 $SYS_PREFIX/var/gentoo/system-gentoo-$A$SV-$V$R.squashfs

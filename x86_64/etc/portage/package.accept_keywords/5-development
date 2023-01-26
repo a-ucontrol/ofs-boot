@@ -1,0 +1,5 @@
+dev-db/pgmodeler ~amd64
+app-editors/vscode ~amd64
+
+#qt-creator
+dev-qt/qtquicktimeline ~amd64

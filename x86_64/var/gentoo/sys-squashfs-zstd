@@ -1,0 +1,10 @@
+#!/bin/bash
+
+. ./env
+. $SYS_PREFIX/var/gentoo/version
+
+./chroot-cross-system eix-update
+
+mksquashfs $SYS_PREFIX/var/gentoo/system-gentoo $SYS_PREFIX/var/gentoo/system-gentoo-$A$SV-$V$R.zstd.squashfs -comp zstd
+
+chmod 0644 $SYS_PREFIX/var/gentoo/system-gentoo-$A$SV-$V$R.zstd.squashfs

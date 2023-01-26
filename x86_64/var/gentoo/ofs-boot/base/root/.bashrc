@@ -5,6 +5,8 @@
 # that can't tolerate any output.  So make sure this doesn't display
 # anything or bad things will happen !
 
+source /etc/profile
+
 export UMOUNT=""
 export IFTOP="/usr/sbin/iftop -B -m 4M"
 export NETHOGS="/usr/sbin/nethogs"
@@ -21,4 +23,3 @@ fi
 # Put your fun stuff here.
 
 setterm -cursor on
-source /etc/profile

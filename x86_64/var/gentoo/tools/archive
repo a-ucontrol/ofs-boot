@@ -1,0 +1,11 @@
+#!/bin/bash
+
+. ../env
+. $SYS_PREFIX/var/gentoo/version
+
+export DIR="tools-$A-$V$R"
+TEMPLATE=.a-files ../cp-files
+
+cd $SYS_PREFIX/var/gentoo/tools && tar -cf "$DIR".tar $DIR && xz -9 -T0 -v "$DIR".tar
+
+rm -rf "$DIR"

@@ -1,7 +1,0 @@
-post_src_install() {
-echo "Start post_src_install..."
-mkdir ../../image/usr/libexec
-mv ../../image/usr/lib/cups ../../image/usr/libexec/
-chmod 0775 ../../image/etc/init.d/xpra
-sed s/"XPRA_LOG_FORMAT=%(message)s"/"XPRA_LOG_FORMAT=\"%(message)s\""/ -i ../../image/etc/default/xpra
-}

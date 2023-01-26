@@ -1,7 +1,8 @@
 #!/bin/bash
 
-. /var/gentoo/version
+. ./env
+. $SYS_PREFIX/var/gentoo/version
 
 echo "packages"
-mksquashfs  /var/portage/packages packages-$V$R.squashfs -b 1M -comp xz
-chmod 0644 packages-$V$R.squashfs
+mksquashfs  $SYS_PREFIX/var/portage/packages packages-$A-$V$R.squashfs -b 1M
+chmod 0644 packages-$A-$V$R.squashfs

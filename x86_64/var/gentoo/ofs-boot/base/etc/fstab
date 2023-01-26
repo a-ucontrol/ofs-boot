@@ -22,7 +22,5 @@
 
 /run/ofs/mount		/mnt/ofs-boot	none		bind,noauto	0 0
 
-/var/portage/portage.squashfs	/usr/portage	squashfs	noauto	0 0
-
-none	/tmp		tmpfs	size=256M,nosuid,nodev,noatime,nodiratime		0 0
-none	/var/log	tmpfs	size=16M,nosuid,nodev,noatime,nodiratime,noexec		0 0
+none	/tmp		tmpfs	size=256M,nosuid,nodev,noatime,nodiratime			0 0
+none	/var/log	tmpfs	size=16M,nosuid,nodev,noatime,nodiratime,noexec,mode=755	0 0

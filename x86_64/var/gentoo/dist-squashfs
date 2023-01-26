@@ -1,7 +1,8 @@
 #!/bin/bash
 
-. /var/gentoo/version
+. ./env
+. $SYS_PREFIX/var/gentoo/version
 
 echo "distfiles"
-mksquashfs  /var/portage/distfiles distfiles-$V$R.squashfs -b 1M -comp xz
-chmod 0644 distfiles-$V$R.squashfs
+mksquashfs  $SYS_PREFIX/var/portage/distfiles distfiles-$A-$V$R.squashfs -b 1M
+chmod 0644 distfiles-$A-$V$R.squashfs

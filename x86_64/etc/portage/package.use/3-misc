@@ -1,0 +1,27 @@
+#calligra
+media-gfx/pstoedit plotutils
+#fish
+dev-libs/libpcre2 pcre32
+#firefox
+media-libs/libvpx postproc
+#nginx
+app-misc/mime-types nginx
+#freecad
+dev-python/pillow webp
+#cacti
+dev-lang/php cli
+#gnome-keyring
+app-crypt/gcr gtk
+
+net-libs/tox daemon dht-node
+app-emulation/spice gstreamer lz4
+net-misc/spice-gtk lz4 mjpeg pulseaudio
+net-misc/xrdp fuse
+net-misc/xorgxrdp glamor
+app-office/calligra -calligra_features_sheets -calligra_features_words
+media-video/vlc live opus projectm pulseaudio
+sys-power/apcupsd cgi
+sys-power/nut cgi
+gui-wm/sway tray wallpapers
+media-libs/libprojectm pulseaudio
+media-sound/easyeffects -doc

@@ -1,0 +1,2 @@
+[ "$SYS_PREFIX" == "" ] && export SYS_PREFIX="/var/gentoo/x86_64/"
+#[ "$SYS_PREFIX" == "" ] && export SYS_PREFIX="/"

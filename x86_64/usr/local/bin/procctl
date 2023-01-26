@@ -1,0 +1,75 @@
+#!/bin/bash
+
+BN=$(basename $0)
+PS=($(ps -C "$BN" -o pid --no-header))
+if [ "$1" == "start" ] ; then
+    if (( ${#PS[*]} == 1 )) ; then
+        $0 >> /var/log/${BN}.log 2>&1 &
+    fi
+    exit 0
+elif [ "$1" == "stop" ] ; then
+    exec killall $BN > /dev/null 2>&1
+fi
+
+#--------------------------------------------------
+WATCH_USERS="1000"
+#--------------------------------------------------
+
+MAX_CPU_USAGE=75  # Граничное значение использование ЦПУ
+SLEEP_TIME=15     # Время в секундах между измерениями
+TIME_TO_RENICE=1  # К-во минут после, которых процессу понижается приоритет
+TIME_TO_KILL=5    # К-во минут для завершения процесса
+
+echo  "Getting user process CPU usage"
+
+export DISPLAY=:0
+
+send_msg(){
+    NOTIFY_USER=$(ps -C startkde -o user --no-header)
+    MSG="$(date +"%d.%m.%y %H:%M") - "
+    MSG+="$(ps --no-headers -o "pid user comm" $i) - $1"
+    echo "$MSG"
+    [ "$NOTIFY_USER" ] && su $NOTIFY_USER -c "notify-send -i \"dialog-information\" \"ProcCtl\" \"$MSG\""
+}
+
+while true ; do
+    i=""
+    for u in $WATCH_USERS ; do
+    i="$(top -u $u -n1 -b | tail -n +8)
+    $i"
+    done
+    PROCS=$(echo "$i" | awk '{print $1"_"$9}' | cut -d',' -f1)
+
+#    echo "$PROCS"
+
+    for i in $PROCS ; do
+        i=(${i//'_'/' '})
+#        echo ">>> ${i[1]}"
+        if [ "$i" != "" ] ; then
+        if (( ${i[1]} > $MAX_CPU_USAGE )) ; then
+             ((TOP[${i[0]}]++))
+             ((CURRENT[${i[0]}] = ${i[1]}))
+        fi
+        fi
+    done
+
+    for i in ${!TOP[*]} ; do
+        if (( ! CURRENT[i] )) ; then
+            unset TOP[i]
+        else
+            [ "$1" == "debug" ] && echo "$i -> ${TOP[i]} : ${CURRENT[i]}"
+            if (( TOP[i] == $TIME_TO_RENICE*60/$SLEEP_TIME )) ; then
+                send_msg "renice"
+                renice +3 -p $i >/dev/null 2>&1
+            elif (( TOP[i] == $TIME_TO_KILL*60/$SLEEP_TIME )) ; then
+                send_msg "send TERM signal"
+                kill $i >/dev/null 2>&1
+            elif (( TOP[i] > $TIME_TO_KILL*60/$SLEEP_TIME )) ; then
+                send_msg "send KILL signal"
+                kill -9 $i >/dev/null 2>&1
+            fi
+        fi
+    done
+    unset CURRENT
+    sleep $SLEEP_TIME
+done

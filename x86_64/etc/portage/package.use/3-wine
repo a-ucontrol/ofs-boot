@@ -1,2 +1,3 @@
-app-emulation/wine-staging s3tc
 app-emulation/wine-gecko abi_x86_32
+app-emulation/wine-staging -sdl -gcrypt
+app-emulation/faudio -abi_x86_32

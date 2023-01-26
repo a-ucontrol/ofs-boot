@@ -1,38 +1,27 @@
-#splashutils
-virtual/jpeg static-libs
-app-arch/bzip2 static-libs
+#media-video/pipewire
+media-libs/rubberband ladspa
+#app-emulation/qemu
 sys-libs/zlib static-libs
-media-libs/libjpeg-turbo static-libs
-media-libs/libpng static-libs
-sys-libs/gpm static-libs
-sys-apps/util-linux static-libs
-media-libs/freetype static-libs
-#x2goserver  (gles2 extension)
+#x2goserver
 media-libs/mesa gles2
-#mpv[wayland]
-x11-libs/libva wayland
-#kodi
-net-misc/curl http2
+#mpv
+media-libs/libva wayland
 #partitionmanager
 kde-plasma/kde-cli-tools kdesu
-#qemu
-dev-libs/libpcre static-libs
-sys-apps/attr static-libs
-dev-libs/glib static-libs
+#virt-manager
+net-dns/dnsmasq script
 
-media-gfx/splashutils fbcondecor
-net-print/cups -usb
+sys-fs/squashfs-tools lz4 xz lzma lzo zstd
+sys-kernel/genkernel -firmware
 media-libs/freetype infinality
 x11-base/xorg-server xvfb
-sys-kernel/genkernel -firmware
 dev-qt/qtnetwork -networkmanager
 media-libs/phonon -designer gstreamer -vlc
 net-misc/tigervnc server
 net-libs/glib-networking -libproxy
 kde-apps/okular djvu ebook
-media-video/mpv lua dvdnav bluray -sdl -samba libmpv wayland
+media-video/mpv lua dvdnav bluray -sdl -samba libmpv wayland -vulkan
 media-video/ffmpeg quvi rtmp gnutls opus vpx x265 webp openssl
-x11-wm/xpra server pillow csc dec_avcodec2 enc_x264 enc_x265 enc_ffmpeg vpx webp sound pulseaudio
-media-sound/pulseaudio equalizer zeroconf realtime
-media-plugins/alsa-plugins pulseaudio
-sys-fs/squashfs-tools lz4
+x11-wm/xpra server pillow csc vpx webp sound pulseaudio lzo webcam brotli html pinentry xdg
+www-apps/xpra-html5 brotli minify
+media-video/pipewire pipewire-alsa sound-server

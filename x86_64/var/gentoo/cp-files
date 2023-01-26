@@ -10,6 +10,6 @@ FILES=$(find $TEMPLATE -type f | sed s/"$TEMPLATE\/"//)
 
 echo "$FILES"
 
-cd / && cp --parents -r $FILES $P/$DIR
+cd $SYS_PREFIX/ && cp --parents -r $FILES $P/$DIR
 
 cd $P

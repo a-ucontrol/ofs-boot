@@ -1,10 +1,7 @@
-#portage
-dev-lang/python sqlite
+#plymouth
+x11-libs/libdrm libkms
 
 #apcupsd
 sys-apps/util-linux tty-helpers
 
-#qt5
-dev-libs/libpcre pcre16
-
-sys-auth/consolekit pm-utils
+dev-lang/python sqlite

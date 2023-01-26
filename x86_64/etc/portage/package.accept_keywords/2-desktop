@@ -1,0 +1,12 @@
+x11-misc/xcape ~amd64
+app-text/kjots ~amd64
+kde-misc/latte-dock ~amd64
+media-plugins/alsaequal ~amd64
+
+net-libs/tox ~amd64
+net-im/skypeforlinux ~amd64
+net-misc/anydesk ~amd64
+net-misc/teamviewer ~amd64
+
+#anydesk
+=x11-libs/gtkglext-1.2.0-r5 ~amd64

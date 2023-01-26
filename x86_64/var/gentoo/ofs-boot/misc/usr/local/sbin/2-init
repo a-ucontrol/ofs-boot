@@ -1,0 +1,2 @@
+[ "$(cat /etc/group | grep vboxusers)" != "" ] && gpasswd vboxusers -a user
+[ "$(cat /etc/group | grep kvm)" != "" ] && gpasswd kvm -a user

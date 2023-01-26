@@ -1,16 +1,18 @@
 #!/bin/bash
 
-. /var/gentoo/version
+. ./env
+. $SYS_PREFIX/var/gentoo/version
 
-ecroot="/var/gentoo/system-gentoo"
+ecroot="$SYS_PREFIX/var/gentoo/system-gentoo"
 
 mount /dev/ ${ecroot}/dev/ --bind -o ro
 mount -t devpts none ${ecroot}/dev/pts -o gid=5
-mount -o loop /var/gentoo/portage-$P.squashfs ${ecroot}/usr/portage
-mount --bind /var/portage/packages ${ecroot}/var/portage/packages -o ro
+mount --bind $SYS_PREFIX/usr/portage ${ecroot}/usr/portage
+mount --bind $SYS_PREFIX/var/portage/packages ${ecroot}/var/portage/packages -o ro
 mount -t proc none ${ecroot}/proc -o ro
 mount -t tmpfs none ${ecroot}/run
 
+unset SYS_PREFIX
 LC_ALL=C chroot ${ecroot} $*
 
 umount ${ecroot}/dev/pts

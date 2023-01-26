@@ -1,3 +1,5 @@
 #N=name
-#SV=20180328
+#SV=-base-20230117.zstd
+
 #cp --preserve ./misc/* -r $DIR
+#cp --preserve /usr/lib/firmware/ -r $DIR/usr/lib/

@@ -1,3 +1,0 @@
-#!/bin/bash
-
-emerge --update --newuse --deep --with-bdeps=y --changed-deps=y $*

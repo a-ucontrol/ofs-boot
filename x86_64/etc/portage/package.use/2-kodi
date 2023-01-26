@@ -1,4 +1,4 @@
-media-tv/kodi upnp webserver zeroconf -udisks -bluetooth -dvd -xslt -css -upower -dbus pulseaudio
+net-misc/curl http2
+media-tv/kodi upnp webserver zeroconf -udisks -bluetooth -dvd -xslt -css -upower dbus pulseaudio
 net-libs/libmicrohttpd messages
-
 media-tv/tvheadend iptv -dvb -capmt -cwc -constcw -ffmpeg

@@ -2,17 +2,16 @@
 
 BP=$(echo "$0" | sed s/$(basename $0)//)
 
-KV=$(ls | grep kernel*.tar.xz | sed s/kernel-// | sed s/.tar.xz//)
+FV=$(ls | grep kernel*.tar.xz | sed s/kernel-// | sed s/.tar.xz//)
 
-if [ "$KV" == "" ] ; then
+if [ "$FV" == "" ] ; then
 echo "Kernel not found!"
 exit 1
 fi
 
-if [ ! -d ./kernel-$KV ] ; then
-echo "Unpack kernel.."
-tar -xJpf ./kernel-$KV.tar.xz
-[ -d ./kernel-$KV/lib64 ] && mv ./kernel-$KV/lib64 ./kernel-$KV/lib
+if [ ! -d ./kernel-$FV ] ; then
+echo "Unpack kernel..."
+tar -xJpf ./kernel-$FV.tar.xz
 fi
 
 DIR=ro-temp
@@ -21,10 +20,13 @@ mkdir -p $DIR
 
 cp --preserve $BP/base/* -r $DIR
 cp --preserve $BP/user/* -r $DIR
-cp --preserve ./kernel-$KV/boot/ -r $DIR
-cp --preserve ./kernel-$KV/lib/ -r $DIR
+cp --preserve ./kernel-$FV/boot/ -r $DIR
+cp --preserve ./kernel-$FV/usr/lib/ -r $DIR/usr
 
 N=base
+
+GC=efi/grub-efi.cfg
+[ ! -f "$GC" ] && mkdir -p ./efi && cp $BP/loader/efi/grub-efi.cfg ./efi
 
 if [ -f ./ro.include ] ; then
 CP=$PWD
@@ -33,23 +35,34 @@ cd $CP
 [ "$RET" != "0" ] && echo "Error in ro.include!" && exit 1
 fi
 
+chown 1000:1000 $DIR/home/user -R
+
 mkdir -p ro
 
-[ -f "ro/ro-$N-$KV.squashfs" ] &&  echo "File (ro/ro-$N-$KV.squashfs) exist! Renaming..." && sleep 5 && mv ro/ro-$N-$KV.squashfs ro/ro-$N-$KV.squashfs-
+[ -f "ro/ro-$N-$FV.squashfs" ] &&  echo "File (ro/ro-$N-$FV.squashfs) exist! Renaming..." && sleep 5 && mv ro/ro-$N-$FV.squashfs ro/ro-$N-$FV.squashfs-
 
-mksquashfs $DIR ro/ro-$N-$KV.squashfs -comp xz
+mksquashfs $DIR ro/ro-$N-$FV.squashfs -comp xz
 
 rm -rf $DIR
 
-GC=efi/grub-efi.cfg
+echo "FV=$FV"
+A=$(ls kernel-"$FV"/boot | grep vmlinuz | sed s/"-r[0-9][0-9]*"// | cut -d '-' -f 4 | sed s/"+"//)
+echo "A=$A"
+KV=$(echo "$FV" | cut -d'-' -f 1)
+echo "KV=$KV"
+KN=$(echo "$FV" | sed s/"-r[0-9][0-9]*"//g | sed s/"$A"// | cut -d '-' -f 2)
+echo "KN=$KN"
+KR=$(echo "$FV" | sed s/"-$KN-"/-/ | cut -d'-' -f 2 | sed s/"$A"//)
+echo "KR=$KR"
+V=$(echo "$FV" | sed s/"$KV"// | sed s/"-$KN-"/-/ | sed s/"-$KR-"/-/ | sed s/"-$A-"//)
+echo "V=$V"
+[ "$SV" == "" ] && SV=-$(echo "$V" | cut -d'-' -f 1)
+echo "SV=$SV"
 
-[ ! -f "$GC" ] && mkdir -p ./efi && cp $BP/loader/efi/grub-efi.cfg ./efi
+sed s/kv=.*$/kv=$KV/ -i $GC
+sed s/arch=.*$/arch=$A/ -i $GC
+sed s/lsystem=.*$/lsystem=system-gentoo-'$arch'$SV.squashfs/ -i $GC
+[ "$KR" != "" ] && sed s/kr=.*$/"kr=-$KR"/ -i $GC
+[ "$KN" != "" ]  && sed s/lro=.*$/lro=ro-$N-'$kv'-$KN'$kr'-'$arch'-$V.squashfs/ -i $GC || sed s/lro=.*$/lro=ro-$N-'$kv$kr'-'$arch'-$V.squashfs/ -i $GC
 
-V=$(echo "$KV" | cut -d'-' -f 1)
-R=$(echo "$KV" | cut -d'-' -f 2 | grep 'r')
-[ "$R" != "" ] && sed s/kr=.*$/"kr=-$R"/ -i $GC
-sed s/kv=.*$/kv=$V/ -i $GC
-[ "$R" != "" ] && echo "kernel: $V-$R" || echo "kernel: $V"
-sed s/lro=.*$/lro=ro-$N-$KV.squashfs/ -i $GC
-if [ "$SV" == "" ] ; then [ "$R" == "" ] && SV=$(echo $KV | sed s/"$V-"// | sed s/"gkc"//) || SV=$(echo $KV | sed s/"$V-"// | sed s/"$R-"// | sed s/"gkc"//) ; fi
-sed s/lsystem=.*$/lsystem=system-gentoo-$SV.squashfs/ -i $GC
+echo "kernel: $FV"

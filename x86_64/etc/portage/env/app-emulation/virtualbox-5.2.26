@@ -1,4 +1,0 @@
-pre_pkg_setup() {
-echo "Start pre_pkg_setup..."
-groupadd -rf vboxusers
-}

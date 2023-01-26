@@ -1,0 +1,10 @@
+mail-client/roundcube postgres
+
+#roundcube, cacti
+dev-lang/php gd pdo intl exif postgres curl fpm apache2 sockets mysql
+
+#roundcube
+app-eselect/eselect-php fpm apache2
+
+#cacti
+net-analyzer/rrdtool graph
