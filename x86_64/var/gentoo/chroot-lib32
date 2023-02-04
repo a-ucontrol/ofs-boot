@@ -1,29 +1,25 @@
 #!/bin/bash
 
-. /var/gentoo/version
-
 ecroot="/var/gentoo/system-lib32"
 
 mount /dev/ ${ecroot}/dev/ --bind -o ro
 mount -t devpts none ${ecroot}/dev/pts -o gid=5
 mount -t tmpfs none ${ecroot}/dev/shm
-mount --bind /usr/portage ${ecroot}/usr/portage
+mount --bind /var/portage/gentoo ${ecroot}/var/portage/gentoo
+mount --bind /var/portage/patches ${ecroot}/var/portage/patches -o rw
 mount --bind /var/portage/distfiles ${ecroot}/var/portage/distfiles -o rw
 mount --bind /var/portage/packages ${ecroot}/var/portage/packages -o ro
 mount -t proc none ${ecroot}/proc -o ro
-mount -t tmpfs none ${ecroot}/var/cache
-#mount -t tmpfs none ${ecroot}/var/log
 mount -t tmpfs none ${ecroot}/run
 
 LC_ALL=C chroot ${ecroot} $*
 
+umount ${ecroot}/run
+umount ${ecroot}/proc
+umount ${ecroot}/var/portage/gentoo
+umount ${ecroot}/var/portage/patches
+umount ${ecroot}/var/portage/distfiles
+umount ${ecroot}/var/portage/packages
 umount ${ecroot}/dev/shm
 umount ${ecroot}/dev/pts
 umount ${ecroot}/dev
-umount ${ecroot}/usr/portage
-umount ${ecroot}/var/portage/distfiles
-umount ${ecroot}/var/portage/packages
-umount ${ecroot}/proc
-umount ${ecroot}/var/cache
-#umount ${ecroot}/var/log
-umount ${ecroot}/run

@@ -8,3 +8,7 @@ app-eselect/eselect-php fpm apache2
 
 #cacti
 net-analyzer/rrdtool graph
+
+#samba
+sys-libs/tevent python
+sys-libs/tdb python

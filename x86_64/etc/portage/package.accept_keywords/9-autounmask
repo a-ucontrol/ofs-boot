@@ -1,0 +1,2 @@
+# required by =sys-kernel/gentoo-sources-6.1.8 (argument)
+=sys-kernel/gentoo-sources-6.1.8 ~amd64

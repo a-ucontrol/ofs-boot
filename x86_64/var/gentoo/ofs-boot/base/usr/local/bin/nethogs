@@ -1,8 +1,0 @@
-#!/bin/bash
-
-if [ "$NETHOGS" != "" ] ; then
-  $NETHOGS 
-  sleep 1
-else
-  /usr/sbin/nethogs $*
-fi

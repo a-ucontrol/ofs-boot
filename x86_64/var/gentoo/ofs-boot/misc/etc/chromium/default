@@ -1,9 +1,0 @@
-# Default settings for chromium. This file is sourced by /bin/bash from
-# the chromium launcher.
-
-# Options to pass to chromium.
-
-CHROMIUM_FLAGS="
---enable-features=VaapiVideoDecoder,VaapiVideoEncoder,Vulkan,VulkanFromANGLE,DefaultANGLEVulkan
-#--force-dark-mode
-"

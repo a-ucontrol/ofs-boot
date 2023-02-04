@@ -6,15 +6,20 @@ BP=$(echo "$0" | sed s/$(basename $0)//)
 
 DIR=$PWD/rw
 
-[ -f "$DIR/rw-overlay.loop" ] &&  echo "File sxist! Renaming..." && sleep 5 && mv $DIR/rw-overlay.loop $DIR/rw-overlay.loop- || mkdir -p $DIR
+. ./env
 
-dd if=/dev/zero of=$DIR/rw-overlay.loop bs=$RW_SIZE count=1
-mkfs.ext4 -O ^has_journal $DIR/rw-overlay.loop
+[ "$NAME" == "" ] && NAME="overlay"
+
+[ -f "$DIR/rw-$NAME.loop" ] &&  echo "File sxist! Renaming..." && sleep 5 && mv $DIR/rw-$NAME.loop $DIR/rw-$NAME.loop- || mkdir -p $DIR
+
+dd if=/dev/zero of=$DIR/rw-$NAME.loop bs=$RW_SIZE count=1
+mkfs.ext4 -O ^has_journal $DIR/rw-$NAME.loop
 
 if [ -f ./rw.include ] ; then
-mount $DIR/rw-overlay.loop $DIR
+mount $DIR/rw-$NAME.loop $DIR
 RWDIR=$DIR/ud
 mkdir $RWDIR
 . ./rw.include
+[ -d $RWDIR/home/user ] && chown 1000:1000 $RWDIR/home/user -R
 umount $DIR
 fi

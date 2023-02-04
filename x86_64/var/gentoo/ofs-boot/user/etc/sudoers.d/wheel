@@ -1,1 +1,1 @@
-%wheel ALL=(ALL) NOPASSWD: /usr/sbin/iftop, /usr/sbin/nethogs, /usr/local/bin/partitionmanager, /usr/local/bin/wpa_gui, /sbin/shutdown
+%wheel ALL=(ALL) NOPASSWD: /usr/sbin/iftop, /usr/sbin/nethogs, /usr/bin/partitionmanager, /usr/local/bin/wpa_gui, /sbin/shutdown

@@ -1,5 +1,0 @@
-#!/bin/bash
-
-export XDG_CURRENT_DESKTOP=GNOME
-export QT_STYLE_OVERRIDE=Breeze
-/usr/bin/wpa_gui $*

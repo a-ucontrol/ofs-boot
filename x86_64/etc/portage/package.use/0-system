@@ -5,3 +5,4 @@ x11-libs/libdrm libkms
 sys-apps/util-linux tty-helpers
 
 dev-lang/python sqlite
+app-i18n/ibus -X -gui

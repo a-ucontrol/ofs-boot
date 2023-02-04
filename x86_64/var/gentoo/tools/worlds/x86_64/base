@@ -1,4 +1,3 @@
-app-admin/clog
 app-admin/logrotate
 app-admin/sudo
 app-admin/syslog-ng
@@ -28,7 +27,9 @@ media-libs/libva-intel-driver
 media-libs/libva-intel-media-driver
 media-sound/alsa-utils
 media-sound/pavucontrol-qt
+media-video/libva-utils
 media-video/mpv
+media-video/pipewire
 net-analyzer/iftop
 net-analyzer/nethogs
 net-analyzer/nmap
@@ -43,6 +44,7 @@ net-vpn/openvpn
 net-wireless/hostapd
 net-wireless/wavemon
 net-wireless/wpa_supplicant
+sys-apps/busybox
 sys-apps/haveged
 sys-apps/netplug
 sys-apps/pciutils
@@ -52,6 +54,7 @@ sys-apps/usbutils
 sys-auth/realtime-base
 sys-block/partitionmanager
 sys-block/zram-init
+sys-boot/grub
 sys-boot/plymouth-openrc-plugin
 sys-fs/dosfstools
 sys-fs/exfat-utils
@@ -69,6 +72,7 @@ x11-drivers/xf86-video-intel
 x11-misc/alock
 x11-misc/obconf-qt
 x11-misc/picom
+x11-misc/sddm
 x11-misc/tint2
 x11-misc/x11spice
 x11-misc/xss-lock

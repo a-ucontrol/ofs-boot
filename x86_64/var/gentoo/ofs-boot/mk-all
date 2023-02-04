@@ -1,13 +1,17 @@
 #!/bin/bash
 
+. ./env
+
+[ "$NAME" == "" ] && NAME="gentoo"
+
 P="../ofs-boot"
 
 $P/mk-loader
 $P/mk-ro
-RW_SIZE=256M $P/mk-rw
-mkdir -p gentoo/system
-mv ro gentoo/
-mv rw gentoo/
-N=$(ls kernel*.tar.xz | sed s/kernel/ofs-boot-base/)
-XZ_OPT="-9 -T0 -v" tar -cJ efi gentoo > "$N"
-rm -r efi gentoo
+RW_SIZE=512M $P/mk-rw
+mkdir -p linux/system
+mv ro linux/
+mv rw linux/
+N="$(ls kernel*.tar.xz | sed s/kernel/boot-$NAME/ | sed s/.tar.xz$// | sed s/"-r[0-9]*$"//)$R.tar"
+tar -cf "$N" efi linux && xz -T0 -v "$N"
+rm -r efi linux

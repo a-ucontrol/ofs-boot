@@ -1,7 +1,6 @@
 #!/bin/bash
 
 . ./env
-. $SYS_PREFIX/var/gentoo/version
 
 echo "packages"
 mksquashfs  $SYS_PREFIX/var/portage/packages packages-$A-$V$R.squashfs -b 1M

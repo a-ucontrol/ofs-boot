@@ -1,7 +1,6 @@
 #!/bin/bash
 
 . ./env
-. $SYS_PREFIX/var/gentoo/version
 
 echo "distfiles"
 mksquashfs  $SYS_PREFIX/var/portage/distfiles distfiles-$A-$V$R.squashfs -b 1M

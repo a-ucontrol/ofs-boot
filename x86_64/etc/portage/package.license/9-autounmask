@@ -1,0 +1,2 @@
+# required by sys-firmware/alsa-firmware (argument)
+>=sys-firmware/alsa-firmware-1.2.4-r1 freedist

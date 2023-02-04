@@ -1,7 +1,5 @@
 #!/bin/bash
 
-. /var/gentoo/version
-
 P=/var/gentoo
 
 emerge --unmerge lib-x86_32-bin wine-staging unigine-tropics unigine-heaven
@@ -10,6 +8,7 @@ cd $P
 mkdir -p $P/lib32/include
 cp -r $P/system-lib32/usr/lib lib32/
 cp -r $P/system-lib32/usr/include/i686* lib32/include/
+
 cd /usr/lib
 L=$(find | sed s/" "/"\\\\ "/g | sed s/"("/"\\\\("/g | sed s/")"/"\\\\)"/g)
 cd $P/lib32/lib

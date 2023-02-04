@@ -1,20 +1,10 @@
 #!/bin/bash
 
 . ./env
-. $SYS_PREFIX/var/gentoo/version
 
-#./chroot-cross-system rm -rf /var/log/emerge* /var/log/portage/elog/summary.log /root
-#./chroot-cross-system etc-update
-#./chroot-cross-system env-update
+ecroot="$SYS_PREFIX/var/gentoo/system-gentoo"
 
-[ -f $SYS_PREFIX/usr/bin/eix-update ] && ./chroot-cross-system eix-update
+[ -f $ecroot/usr/bin/eix-update ] && ./chroot-cross-system eix-update
 
-#mksquashfs $SYS_PREFIX/var/gentoo/system-gentoo $SYS_PREFIX/var/gentoo/system-gentoo-$A$SV-$V$R.squashfs -noI -noD -noF -noX
-
-#mksquashfs $SYS_PREFIX/var/gentoo/system-gentoo $SYS_PREFIX/var/gentoo/system-gentoo-$A$SV-$V$R.zstd.squashfs -comp zstd
-
-mksquashfs $SYS_PREFIX/var/gentoo/system-gentoo $SYS_PREFIX/var/gentoo/system-gentoo-$A$SV-$V$R.squashfs -b 1M -comp xz -Xbcj x86
-
-#chmod 0644 $SYS_PREFIX/var/gentoo/system-gentoo-$A$SV-$V$R.zstd.squashfs
-
-chmod 0644 $SYS_PREFIX/var/gentoo/system-gentoo-$A$SV-$V$R.squashfs
+mksquashfs $SYS_PREFIX/var/gentoo/system-gentoo $SYS_PREFIX/var/gentoo/system-gentoo$SV-$A-$V$R.squashfs -b 1M -comp xz -Xbcj x86
+chmod 0644 $SYS_PREFIX/var/gentoo/system-gentoo$SV-$A-$V$R.squashfs

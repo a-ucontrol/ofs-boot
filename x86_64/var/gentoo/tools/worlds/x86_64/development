@@ -1,7 +1,6 @@
-app-arch/msitools
 app-doc/doxygen
 app-editors/okteta
-dev-db/dbeaver-bin
+app-editors/vscode
 dev-db/pgmodeler
 dev-embedded/libftdi
 dev-java/openjdk
@@ -9,16 +8,10 @@ dev-qt/assistant
 dev-qt/linguist
 dev-qt/qt-creator
 dev-qt/qt-docs
-dev-qt/qtcharts
 dev-qt/qttranslations
-dev-util/astyle
 dev-util/ccache
 dev-util/ctags
-dev-util/emscripten
-dev-util/uncrustify
 dev-vcs/qgit
 net-dialup/picocom
-net-libs/libsrtp
-net-libs/wt
 sys-devel/distcc
 sys-libs/ncurses-compat

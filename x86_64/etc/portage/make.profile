@@ -1,1 +1,1 @@
-../../usr/portage/profiles/default/linux/amd64/23.0/desktop/plasma
+../../var/portage/gentoo/profiles/default/linux/amd64/23.0/desktop/plasma

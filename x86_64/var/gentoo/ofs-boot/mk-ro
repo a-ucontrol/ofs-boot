@@ -18,15 +18,13 @@ DIR=ro-temp
 
 mkdir -p $DIR
 
-cp --preserve $BP/base/* -r $DIR
-cp --preserve $BP/user/* -r $DIR
 cp --preserve ./kernel-$FV/boot/ -r $DIR
-cp --preserve ./kernel-$FV/usr/lib/ -r $DIR/usr
-
-N=base
+cp --preserve ./kernel-$FV/usr/ -r $DIR
 
 GC=efi/grub-efi.cfg
 [ ! -f "$GC" ] && mkdir -p ./efi && cp $BP/loader/efi/grub-efi.cfg ./efi
+
+. ./env
 
 if [ -f ./ro.include ] ; then
 CP=$PWD
@@ -35,7 +33,10 @@ cd $CP
 [ "$RET" != "0" ] && echo "Error in ro.include!" && exit 1
 fi
 
-chown 1000:1000 $DIR/home/user -R
+[ "$NAME" == "" ] && NAME="gentoo"
+N="$NAME"
+
+[ -d $DIR/home/user ] && chown 1000:1000 $DIR/home/user -R
 
 mkdir -p ro
 
@@ -56,13 +57,16 @@ KR=$(echo "$FV" | sed s/"-$KN-"/-/ | cut -d'-' -f 2 | sed s/"$A"//)
 echo "KR=$KR"
 V=$(echo "$FV" | sed s/"$KV"// | sed s/"-$KN-"/-/ | sed s/"-$KR-"/-/ | sed s/"-$A-"//)
 echo "V=$V"
-[ "$SV" == "" ] && SV=-$(echo "$V" | cut -d'-' -f 1)
+[ "$SV" == "" ] && SV=$(echo "$V" | cut -d'-' -f 1)
 echo "SV=$SV"
+
+[ "$SN" != "" ] && SN=-"$SN"
 
 sed s/kv=.*$/kv=$KV/ -i $GC
 sed s/arch=.*$/arch=$A/ -i $GC
-sed s/lsystem=.*$/lsystem=system-gentoo-'$arch'$SV.squashfs/ -i $GC
+sed s/lsystem=.*$/lsystem=system-$NAME$SN-'$arch'-$SV.squashfs/ -i $GC
 [ "$KR" != "" ] && sed s/kr=.*$/"kr=-$KR"/ -i $GC
 [ "$KN" != "" ]  && sed s/lro=.*$/lro=ro-$N-'$kv'-$KN'$kr'-'$arch'-$V.squashfs/ -i $GC || sed s/lro=.*$/lro=ro-$N-'$kv$kr'-'$arch'-$V.squashfs/ -i $GC
+sed s/rw-overlay/rw-$NAME/ -i $GC
 
 echo "kernel: $FV"

@@ -15,7 +15,7 @@ app-crypt/gcr gtk
 
 net-libs/tox daemon dht-node
 app-emulation/spice gstreamer lz4
-net-misc/spice-gtk lz4 mjpeg pulseaudio
+net-misc/spice-gtk lz4 mjpeg pulseaudio gtk3
 net-misc/xrdp fuse
 net-misc/xorgxrdp glamor
 app-office/calligra -calligra_features_sheets -calligra_features_words

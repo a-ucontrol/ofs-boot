@@ -193,7 +193,7 @@ net-misc/x2goclient
 net-misc/x2goserver
 net-misc/xorgxrdp
 net-misc/xrdp
-net-misc/youtube-dl
+net-misc/yt-dlp
 net-p2p/ktorrent
 net-p2p/qbittorrent
 net-print/cups-pdf
@@ -221,6 +221,7 @@ sys-block/zram-init
 sys-boot/grub
 sys-boot/plymouth-openrc-plugin
 sys-devel/distcc
+sys-firmware/sof-firmware
 sys-fs/dosfstools
 sys-fs/exfat-utils
 sys-fs/mdadm
@@ -231,6 +232,8 @@ sys-fs/squashfs-tools
 sys-fs/ubi_reader
 sys-kernel/genkernel
 sys-kernel/gentoo-sources
+sys-kernel/gentoo-sources:5.15.88
+sys-kernel/gentoo-sources:6.1.8
 sys-kernel/linux-firmware
 sys-libs/ncurses-compat
 sys-power/acpid

@@ -1,2 +1,7 @@
-[ "$SYS_PREFIX" == "" ] && export SYS_PREFIX="/var/gentoo/x86_64/"
-#[ "$SYS_PREFIX" == "" ] && export SYS_PREFIX="/"
+#[ "$SYS_PREFIX" == "" ] && export SYS_PREFIX="/var/gentoo/x86_64/"
+
+A=x86_64
+V="20230131"
+[ "$KV" == "" ] && KV="5.15.88"
+[ "$R" == "" ] && R=""
+[ "$SV" == "" ] && SV=""

@@ -36,10 +36,8 @@ media-gfx/krita
 media-sound/elisa
 media-video/simplescreenrecorder
 media-video/smplayer
-net-im/skypeforlinux
 net-im/telegram-desktop
-net-im/viber
-net-misc/youtube-dl
+net-misc/yt-dlp
 net-print/cups-pdf
 net-wireless/iw
 sys-auth/pam_mount

@@ -1,5 +1,0 @@
-#!/bin/sh
-
-echo -e '\e[30m.'
-clear
-modprobe i915
