@@ -1,10 +1,1 @@
-#!/bin/bash
-
-. ./env
-
-ecroot="$SYS_PREFIX/var/gentoo/system-gentoo"
-
-[ -f $ecroot/usr/bin/eix-update ] && ./chroot-cross-system eix-update
-
-mksquashfs $SYS_PREFIX/var/gentoo/system-gentoo $SYS_PREFIX/var/gentoo/system-gentoo$SV-$A-$V$R.squashfs -b 1M -comp xz -Xbcj x86
-chmod 0644 $SYS_PREFIX/var/gentoo/system-gentoo$SV-$A-$V$R.squashfs
+../gentoo/ofs-boot/tools/sys-squashfs

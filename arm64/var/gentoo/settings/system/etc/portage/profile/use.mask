@@ -1,3 +1,0 @@
--elogind
--qt5
--raspberry-pi

@@ -1,9 +1,1 @@
-#!/bin/bash
-
-CP=$PWD
-
-#kernel-build --integrated-initramfs all
-
-kernel-build kernel && kernel-build "--no-ramdisk-modules --initramfs-filename=initramfs-%%KV%%.min.img initramfs" && kernel-build "--mdadm --all-ramdisk-modules --initramfs-filename=initramfs-%%KV%%.all.img initramfs" && kernel-build "--mdadm initramfs"
-
-cd $CP
+../../../var/gentoo/ofs-boot/tools/kbuild

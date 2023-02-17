@@ -1,0 +1,20 @@
+#!/bin/bash
+
+V=$(ls ../ | grep "portage-" | sed s/"portage-"// | sed s/".squashfs"//)
+
+wd=/var/gentoo
+
+TEMPLATE=.a-files DIR=x86_64 SYS_PREFIX=$wd/x86_64 ../ofs-boot/tools/cp-files
+TEMPLATE=.a-files DIR=arm64 SYS_PREFIX=$wd/arm64 ../ofs-boot/tools/cp-files
+
+DIR=ofs-boot-$V$R
+mkdir -p $DIR
+
+mv x86_64 $DIR
+mv arm64 $DIR
+
+TEMPLATE=.files DIR=$DIR SYS_PREFIX=${wd} ../ofs-boot/tools/cp-files
+
+tar -cf "$DIR".tar "$DIR" && xz -9 -T0 -v "$DIR".tar
+
+rm -rf "$DIR"

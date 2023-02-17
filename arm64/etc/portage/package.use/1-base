@@ -1,6 +1,11 @@
 #kodi
 media-video/ffmpeg openssl
+media-libs/mesa gles2
 
-media-gfx/splashutils fbcondecor
 sys-kernel/genkernel -firmware
-media-video/ffmpeg libdrm libv4l
+
+media-libs/libsdl2 kms
+media-video/ffmpeg libdrm
+
+media-libs/mesa X wayland
+media-libs/libglvnd X

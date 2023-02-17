@@ -1,0 +1,15 @@
+#!/bin/bash
+
+P=$PWD
+
+[ "$DIR" == "" ] && DIR="files"
+[ "$TEMPLATE" == "" ] && TEMPLATE=".cp-files"
+
+find $TEMPLATE -type d | sed s/"^$TEMPLATE"/"$DIR"/g | grep -v '*' | xargs mkdir -p
+FILES=$(find $TEMPLATE -type f | sed s/"$TEMPLATE\/"//)
+
+echo "$FILES"
+
+cd $SYS_PREFIX/ && cp --parents -a -r $FILES $P/$DIR
+
+cd $P

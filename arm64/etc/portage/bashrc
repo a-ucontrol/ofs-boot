@@ -1,7 +1,7 @@
 pre_src_prepare() {
 PATCH_DIR="/var/portage/patches"
 PATCH_OPTS="-g0 -E --no-backup-if-mismatch"
-local count=1
+local count=0
 if [ -d "${PATCH_DIR}/${CATEGORY}/${PN}/${PV}" ]; then
      for PATCH in $(find "${PATCH_DIR}/${CATEGORY}/${PN}/${PV}/" -type f -name "*.patch.bz2" | sort)
      do

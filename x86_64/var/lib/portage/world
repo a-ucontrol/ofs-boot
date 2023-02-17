@@ -46,6 +46,7 @@ app-shells/gentoo-bashcomp
 app-text/coolreader
 app-text/fbreader
 app-text/kjots
+app-text/texlive
 dev-db/dbeaver-bin
 dev-db/pgmodeler
 dev-db/postgresql:10
@@ -59,12 +60,17 @@ dev-qt/qt-creator
 dev-qt/qt-docs
 dev-qt/qtcharts
 dev-qt/qttranslations
+dev-texlive/texlive-latex
+dev-texlive/texlive-latexextra
+dev-texlive/texlive-latexrecommended
 dev-util/astyle
 dev-util/bdelta
 dev-util/ccache
 dev-util/ctags
 dev-util/emscripten
+dev-util/jenkins-bin
 dev-util/uncrustify
+dev-util/vbindiff
 dev-util/xdelta
 dev-vcs/qgit
 games-action/extreme-tuxracer
@@ -103,6 +109,7 @@ kde-apps/okular
 kde-apps/palapeli
 kde-apps/plasma-telepathy-meta
 kde-apps/spectacle
+kde-apps/umbrello
 kde-misc/kdeconnect
 kde-misc/krename
 kde-misc/krusader
@@ -123,6 +130,7 @@ media-fonts/dejavu
 media-fonts/noto-emoji
 media-fonts/terminus-font
 media-gfx/freecad
+media-gfx/kgraphviewer
 media-gfx/krita
 media-libs/libva-intel-driver
 media-libs/libva-intel-media-driver
@@ -245,6 +253,7 @@ sys-power/thermald
 sys-process/btop
 sys-process/htop
 sys-process/lsof
+www-apps/gitea
 www-client/chromium
 www-client/falkon
 www-client/firefox

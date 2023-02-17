@@ -1,0 +1,11 @@
+#!/bin/bash
+
+[ "$ecroot" == ""  ] && ecroot="/var/gentoo/system-gentoo"
+
+umount ${ecroot}/run
+umount ${ecroot}/proc
+umount ${ecroot}/var/portage/gentoo
+umount ${ecroot}/var/portage/overlay
+umount ${ecroot}/var/portage/packages
+umount ${ecroot}/dev/pts
+umount ${ecroot}/dev

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+. ./env
+
+ecroot="$SYS_PREFIX/var/gentoo/system-gentoo"
+
+ecroot=${ecroot} ./mount-chroot
+
+unset SYS_PREFIX
+LC_ALL=C chroot ${ecroot} $*
+
+ecroot=${ecroot} ./umount-chroot

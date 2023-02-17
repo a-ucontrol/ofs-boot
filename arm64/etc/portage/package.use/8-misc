@@ -1,2 +1,4 @@
 net-wireless/bluez deprecated
 media-sound/bluez-alsa hcitop
+media-tv/v4l-utils -bpf
+net-wireless/hostapd internal-tls

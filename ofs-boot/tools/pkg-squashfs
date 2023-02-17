@@ -1,0 +1,7 @@
+#!/bin/bash
+
+. ./env
+
+echo "packages"
+mksquashfs  $SYS_PREFIX/var/portage/packages packages-$A-$V$R.squashfs -b 1M
+chmod 0644 packages-$A-$V$R.squashfs

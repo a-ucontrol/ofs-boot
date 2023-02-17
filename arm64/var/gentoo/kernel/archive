@@ -1,10 +1,10 @@
 #!/bin/bash
 
-. ../version
+. ../env
 
-export DIR="kernel-$KV-$V$R"
+export DIR="kernel-$KV-$A-$V$R"
 TEMPLATE=.a-files ../cp-files
 
-cd /var/gentoo/arm64/var/gentoo/kernel && tar -cf kernel-$KV-$V$R.tar $DIR && xz -9 -T0 -v kernel-$KV-$V$R.tar
+tar -cf $DIR.tar $DIR && xz -9 -T0 -v $DIR.tar
 
 rm -rf "$DIR"

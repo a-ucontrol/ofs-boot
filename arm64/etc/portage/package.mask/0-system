@@ -1,0 +1,4 @@
+#<dev-lang/python-3.10
+>=dev-lang/python-3.11
+dev-lang/rust
+dev-lang/rust-bin

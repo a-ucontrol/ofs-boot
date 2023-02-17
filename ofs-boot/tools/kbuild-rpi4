@@ -1,0 +1,7 @@
+#!/bin/bash
+
+CP=$PWD
+
+kernel-build all --no-ramdisk-modules --kernel-localversion=-rpi4-arm64
+
+cd $CP

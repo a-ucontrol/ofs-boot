@@ -1,1 +1,1 @@
-../../usr/portage/profiles/default/linux/arm64/17.0/desktop
+../../var/portage/gentoo/profiles/default/linux/arm64/23.0/desktop

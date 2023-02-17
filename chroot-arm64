@@ -1,0 +1,13 @@
+#!/bin/bash
+
+COLORTERM=""
+
+ecroot="/var/gentoo/arm64"
+
+ecroot=${ecroot} ./mount-ecroot
+
+[ ! -f ${ecroot}/root/.bashrc ] && mkdir -p ${ecroot}/root && echo "PS1=\"chroot arm64 \$PS1\"" > ${ecroot}/root/.bashrc
+
+LC_ALL=C chroot ${ecroot} $*
+
+ecroot=${ecroot} ./umount-ecroot

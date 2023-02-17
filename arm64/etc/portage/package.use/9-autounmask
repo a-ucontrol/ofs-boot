@@ -1,0 +1,4 @@
+# required by net-wireless/wavemon-0.9.4::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libnl-3.5.0 utils

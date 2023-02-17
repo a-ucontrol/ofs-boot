@@ -1,0 +1,2 @@
+mkdir /home/user/.cache
+echo "none	/home/user/.cache	tmpfs	nosuid,nodev,noatime,nodiratime		0 0" >> /etc/fstab

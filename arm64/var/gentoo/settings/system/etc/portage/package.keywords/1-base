@@ -1,8 +1,0 @@
-=net-ftp/vsftpd-3.0.3-r2 **
-=net-ftp/ftpbase-0.01-r3 ~arm64
-=sys-apps/netplug-1.2.9.2-r3 **
-=dev-libs/klibc-2.0.4-r3 **
-=media-gfx/splashutils-1.5.4.4-r8 **
-=media-gfx/splash-themes-livedvd-12.0-r3 **
-=media-gfx/fbgrab-1.3 ~arm64
-=dev-libs/openssl-1.1.1c-r1 ~arm64

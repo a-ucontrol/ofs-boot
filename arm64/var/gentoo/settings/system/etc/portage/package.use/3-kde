@@ -1,7 +1,0 @@
-# required by www-client/falkon-3.0.1-r1::gentoo
-# required by falkon (argument)
->=dev-qt/qtwebengine-5.11.3 widgets
-# required by dev-qt/qtwebengine-5.11.3::gentoo
-# required by www-client/falkon-3.0.1-r1::gentoo
-# required by falkon (argument)
->=dev-qt/qtwebchannel-5.11.3 qml

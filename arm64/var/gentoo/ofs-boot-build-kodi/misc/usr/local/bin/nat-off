@@ -1,0 +1,12 @@
+#!/bin/bash
+
+ iptables -F
+ iptables -t nat -F
+ iptables -t mangle -F
+
+#/etc/init.d/iptables save
+#rc-update del iptables
+
+iptables --list
+echo "------- NAT -------"
+iptables -t nat --list

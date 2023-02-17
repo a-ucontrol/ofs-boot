@@ -1,0 +1,6 @@
+#!/bin/bash
+
+. ./env
+
+mksquashfs $SYS_PREFIX/var/portage/gentoo $SYS_PREFIX/var/gentoo/portage-$V.squashfs -b 1M -comp xz
+chmod 0644 $SYS_PREFIX/var/gentoo/portage-$V.squashfs

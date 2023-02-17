@@ -1,0 +1,4 @@
+export XDG_CURRENT_DESKTOP=KDE
+export XCURSOR_THEME=breeze_cursors
+
+#/usr/bin/ksmserver --lockscreen &

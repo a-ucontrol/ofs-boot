@@ -1,0 +1,16 @@
+#!/bin/sh
+
+echo 4 > /proc/sys/kernel/printk
+
+mount -o remount,rw /
+
+if [ "$(file /bin/umount | grep ELF)" != "" ] ; then
+ mv /bin/umount /bin/umount.bin
+ echo "#!/bin/sh" > /bin/umount
+ echo "if [ \"\$1\" != \"/run/ofs/mount\" ]; then /bin/umount.bin \$*; else /bin/umount.bin -l \$1; fi" >> /bin/umount
+ chmod 755 /bin/umount
+fi
+
+[ -f /usr/sbin/0-init-ofs-boot ] && . /usr/sbin/0-init-ofs-boot
+
+exec /sbin/init $*

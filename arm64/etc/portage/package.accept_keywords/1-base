@@ -1,0 +1,6 @@
+net-ftp/ftpbase ~arm64
+net-ftp/vsftpd ~arm64
+sys-apps/netplug ~arm64
+
+<dev-util/bdelta-9999 **
+<sys-apps/uam-9999 **

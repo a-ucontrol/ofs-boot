@@ -1,3 +1,0 @@
-#N=name
-#SV=20180328
-#cp --preserve ./misc/* -r $DIR

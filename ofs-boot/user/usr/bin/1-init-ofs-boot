@@ -1,0 +1,20 @@
+rc-update del netmount default
+chown polkitd:root $DIR/etc/polkit-1/rules.d -R
+
+if [ "$(cat /etc/passwd | grep "^user:x:")" == "" ] ; then
+useradd -M user
+c_p user user
+ug="wheel audio video users usb dialout lpadmin users kvm"
+for g in $ug ; do
+gpasswd $g -a user
+done
+fi
+
+[ "$(cat /etc/group | grep xpra)" != "" ] && gpasswd xpra -a user
+[ "$(cat /etc/group | grep vboxusers)" != "" ] && gpasswd vboxusers -a user
+[ "$(cat /etc/group | grep pcap)" != "" ] && gpasswd pcap -a user
+[ "$(cat /etc/group | grep plugdev)" != "" ] && gpasswd plugdev -a user
+
+echo "export LANG='ru_RU.utf8'" >> /etc/profile.env
+
+[ -f /usr/sbin/2-init-ofs-boot ] && . /usr/sbin/2-init-ofs-boot

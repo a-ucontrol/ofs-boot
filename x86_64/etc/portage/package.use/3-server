@@ -1,3 +1,6 @@
+www-apps/gitea sqlite
+www-apps/forgejo sqlite
+acct-user/git gitea
 mail-client/roundcube postgres
 
 #roundcube, cacti

@@ -1,14 +1,7 @@
-#genkernel
-sys-apps/util-linux static-libs
-#splashutils
-sys-libs/gpm static-libs
-media-libs/freetype static-libs
-app-arch/bzip2 static-libs
-sys-libs/zlib static-libs
-media-libs/libpng static-libs
-virtual/jpeg:0 static-libs
-media-libs/libjpeg-turbo static-libs
+#plymouth
+x11-libs/libdrm libkms
+
 #kodi
 dev-lang/python sqlite
-#kodi
-media-libs/mesa gles2
+
+sys-boot/plymouth -udev

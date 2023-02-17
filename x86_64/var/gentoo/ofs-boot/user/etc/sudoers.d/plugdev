@@ -1,1 +1,0 @@
-%plugdev ALL=(ALL) NOPASSWD: /usr/local/bin/uam-umount

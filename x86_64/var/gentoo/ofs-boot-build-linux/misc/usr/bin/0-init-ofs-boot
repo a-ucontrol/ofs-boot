@@ -1,0 +1,12 @@
+c_p(){
+echo "$2
+$2" | passwd $1 2> /dev/null
+}
+
+mount -o remount,rw /
+
+c_p root root
+
+[ -f /usr/sbin/1-init-ofs-boot ] && . /usr/sbin/1-init-ofs-boot
+
+rm /usr/sbin/?-init-ofs-boot

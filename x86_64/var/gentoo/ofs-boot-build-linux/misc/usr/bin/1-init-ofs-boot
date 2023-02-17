@@ -1,0 +1,10 @@
+if [ "$(cat /etc/passwd | grep "^user:x:")" == "" ] ; then
+useradd -m user
+c_p user user
+ug="wheel audio video users"
+for g in $ug ; do
+gpasswd $g -a user
+done
+fi
+
+[ -f /usr/sbin/2-init-ofs-boot ] && . /usr/sbin/2-init-ofs-boot

@@ -12,6 +12,8 @@ dev-python/pillow webp
 dev-lang/php cli
 #gnome-keyring
 app-crypt/gcr gtk
+#sway
+gui-apps/swaybg gdk-pixbuf
 
 net-libs/tox daemon dht-node
 app-emulation/spice gstreamer lz4

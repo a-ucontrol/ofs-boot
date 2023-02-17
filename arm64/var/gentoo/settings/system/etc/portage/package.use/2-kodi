@@ -1,7 +1,0 @@
-media-tv/kodi upnp webserver zeroconf gbm -X gles -opengl cec
-net-libs/libmicrohttpd messages
-media-tv/tvheadend iptv -dvb -capmt -cwc -constcw -ffmpeg
-media-libs/libprojectm gles2
-
-net-libs/nghttp2 -cxx
-net-misc/curl http2

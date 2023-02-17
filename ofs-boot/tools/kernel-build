@@ -1,0 +1,6 @@
+#!/bin/bash
+
+[ "$1" == "all" ] && rm -rf /lib/modules/* /boot/*
+[ "$1" == "kernel" ] && rm -rf /lib/modules/* /boot/*
+
+genkernel --makeopts=-j64 --no-keymap --no-zfs --no-btrfs --menuconfig --no-mrproper --no-clean --initramfs-overlay=/usr/src/initramfs $*

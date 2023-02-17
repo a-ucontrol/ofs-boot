@@ -1,0 +1,7 @@
+#!/bin/bash
+
+. ./env
+
+echo "distfiles"
+mksquashfs  $SYS_PREFIX/var/portage/distfiles distfiles-$V$R.squashfs -b 1M
+chmod 0644 distfiles-$V$R.squashfs

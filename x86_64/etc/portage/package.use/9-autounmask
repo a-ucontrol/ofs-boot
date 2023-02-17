@@ -1,4 +1,0 @@
-# required by gui-wm/sway-1.8-r1::gentoo[wallpapers]
-# required by @selected
-# required by @world (argument)
->=gui-apps/swaybg-1.2.0 gdk-pixbuf

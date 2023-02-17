@@ -1,0 +1,11 @@
+#!/sbin/openrc-run
+
+depend()
+{
+	after mount-ro
+}
+
+start()
+{
+	chvt 15
+}

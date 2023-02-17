@@ -1,0 +1,10 @@
+#!/bin/bash
+
+umount ${ecroot}/dev/shm
+umount ${ecroot}/dev/pts
+umount ${ecroot}/dev
+umount ${ecroot}/var/gentoo/ofs-boot
+umount ${ecroot}/var/portage/distfiles
+umount ${ecroot}/var/portage/gentoo
+umount ${ecroot}/proc
+umount ${ecroot}/run

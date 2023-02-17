@@ -1,11 +1,1 @@
-#!/bin/bash
-
-PREFIX="/var/gentoo/arm64"
-
-
-. $PREFIX/var/gentoo/version
-
-echo "packages"
-
-mksquashfs $PREFIX/var/portage/packages $PREFIX/var/gentoo/packages-$V$R.squashfs -b 1M -comp xz
-chmod 0644 $PREFIX/var/gentoo/packages-$V$R.squashfs
+../gentoo/ofs-boot/tools/pkg-squashfs

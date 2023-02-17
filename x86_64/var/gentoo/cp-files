@@ -1,15 +1,1 @@
-#!/bin/bash
-
-P=$PWD
-
-[ "$DIR" == "" ] && DIR="files"
-[ "$TEMPLATE" == "" ] && TEMPLATE=".cp-files"
-
-find $TEMPLATE -type d | sed s/"$TEMPLATE"/"$DIR"/ | grep -v '*' | xargs mkdir -p
-FILES=$(find $TEMPLATE -type f | sed s/"$TEMPLATE\/"//)
-
-echo "$FILES"
-
-cd $SYS_PREFIX/ && cp --parents -r $FILES $P/$DIR
-
-cd $P
+../gentoo/ofs-boot/tools/cp-files

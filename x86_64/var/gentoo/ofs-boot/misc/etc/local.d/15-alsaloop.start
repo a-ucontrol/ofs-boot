@@ -1,1 +1,0 @@
-alsaloop -C "hw:Loopback,1" -P "plug:equal" -t 15000 -d

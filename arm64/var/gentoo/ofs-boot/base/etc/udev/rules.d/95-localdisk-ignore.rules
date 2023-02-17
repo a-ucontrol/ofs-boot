@@ -1,6 +1,0 @@
-#udisks2
-
-ENV{ID_FS_TYPE}=="tmpfs", ENV{UDISKS_IGNORE}="1"
-
-SUBSYSTEM=="block", KERNEL=="loop*", ENV{UDISKS_IGNORE}="1"
-SUBSYSTEM=="block", KERNEL=="sda*", ENV{UDISKS_IGNORE}="1"

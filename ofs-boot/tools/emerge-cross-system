@@ -1,0 +1,45 @@
+#!/bin/bash
+
+ecroot="/var/gentoo/system-gentoo"
+
+mkdir ${ecroot}
+
+CP=$PWD
+cd ofs-boot/tools
+export DIR=_
+TEMPLATE=.s.files ./cp-files
+cp $DIR/* -r ${ecroot}
+rm -r $DIR
+cp cross-system-root/* -r ${ecroot}
+cd $CP
+
+sed s/"-j[0-9]*"/"-j4"/ -i $ecroot/etc/portage/make.conf
+
+A=$(arch)
+
+[ "$A" == "x86_64" ] && sed s/"FEATURES"/"#FEATURES"/ -i $ecroot/etc/portage/make.conf
+[ "$A" == "aarch64" ] && sed s/"FEATURES=\"buildpkg ccache "/"FEATURES=\""/ -i $ecroot/etc/portage/make.conf
+sed s/"#"// -i $ecroot/etc/portage/profile/package.provided
+
+mkdir -p ${ecroot}/dev ${ecroot}/proc ${ecroot}/run ${ecroot}/var/portage/gentoo ${ecroot}/var/portage/overlay ${ecroot}/var/portage/packages ${ecroot}/var/portage/distfiles ${ecroot}/usr/bin ${ecroot}/usr/lib ${ecroot}/usr/lib64
+
+[ "$A" == "aarch64" ] && cp /usr/bin/qemu-aarch64 ${ecroot}/usr/bin
+exit 0
+ecroot=${ecroot} ./mount-chroot
+
+export PKGDIR=${ecroot}/var/portage/packages
+
+export LC_ALL=C
+
+ROOT=${ecroot} SYSROOT=${ecroot} PORTAGE_CONFIGROOT=${ecroot} emerge --jobs=32 -K --nodeps app-alternatives/awk app-alternatives/bc app-alternatives/bzip2 app-alternatives/cpio app-alternatives/gzip app-alternatives/lex app-alternatives/sh app-alternatives/tar app-alternatives/yacc
+ROOT=${ecroot} SYSROOT=${ecroot} PORTAGE_CONFIGROOT=${ecroot} emerge --jobs=32 -1 -K --nodeps coreutils glibc app-arch/bzip2 portage bash ncurses readline python python-exec app-arch/gzip sys-libs/zlib libffi findutils sed acl util-linux attr app-arch/tar shadow grep libpcre sandbox openssl baselayout gcc
+
+export PKGDIR=/var/portage/packages
+
+chroot ${ecroot} emerge --jobs=32 -e -K --with-bdeps=y world
+
+find ${ecroot}/etc -name "._cfg*" | xargs rm
+
+chroot ${ecroot} etc-update
+
+ecroot=${ecroot} ./umount-chroot

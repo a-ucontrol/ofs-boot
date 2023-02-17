@@ -1,0 +1,56 @@
+#!/bin/bash
+
+#-------
+ iptables -F
+ iptables -t nat -F
+ iptables -t mangle -F
+
+#-------
+ iptables -P INPUT ACCEPT
+ iptables -P OUTPUT ACCEPT
+ iptables -P FORWARD DROP
+
+ iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65
+
+#-------
+ export WAN=eth0
+ export LAN=wlan0
+ export ADDRLAN=192.168.0.0/16
+
+#-------
+ iptables -A INPUT -p TCP --dport ssh -j ACCEPT
+
+#-------
+ iptables -A INPUT -p TCP --dport ftp -i ${LAN} -j ACCEPT
+ iptables -A INPUT -p UDP --dport bootps -i ${LAN} -j ACCEPT
+ iptables -A INPUT -p UDP --dport domain -i ${LAN} -j ACCEPT
+
+ iptables -A INPUT -p UDP -i ${LAN} --dport 0:1024 -j DROP
+ iptables -A INPUT -p TCP -i ${LAN} --dport 0:1024 -j DROP
+
+#-------
+ iptables -A INPUT -p TCP -i ${WAN} --dport 0:1024 -j DROP
+ iptables -A INPUT -p UDP -i ${WAN} --dport 0:1024 -j DROP
+
+#-------
+ iptables -A FORWARD ! -i ${WAN} -s ${ADDRLAN} -j ACCEPT
+ iptables -A FORWARD -i ${WAN} -d ${ADDRLAN} -j ACCEPT
+ iptables -t nat -A POSTROUTING -o ${WAN} -j MASQUERADE
+
+#---
+ echo 1 > /proc/sys/net/ipv4/ip_forward
+ for f in /proc/sys/net/ipv4/conf/*/rp_filter ; do echo 1 > $f ; done
+
+#---
+#/etc/init.d/iptables save
+#rc-update add iptables default
+
+#---
+###/etc/sysctl.conf
+###net.ipv4.ip_forward = 1
+###net.ipv4.conf.default.rp_filter = 1
+#---
+
+iptables -vL
+echo "------- NAT -------"
+iptables -t nat -vL

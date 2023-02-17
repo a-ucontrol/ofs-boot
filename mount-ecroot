@@ -1,0 +1,12 @@
+#!/bin/bash
+
+mkdir -p ${ecroot}/var/gentoo/ofs-boot
+
+mount --bind /dev/ ${ecroot}/dev/ -o ro
+mount -t tmpfs none ${ecroot}/dev/shm -o mode=1777
+mount -t devpts none ${ecroot}/dev/pts -o gid=5
+mount ${ecroot}/../portage ${ecroot}/var/portage/gentoo -o ro
+mount ${ecroot}/../distfiles ${ecroot}/var/portage/distfiles --bind
+mount ${ecroot}/../ofs-boot ${ecroot}/var/gentoo/ofs-boot --bind
+mount -t proc none ${ecroot}/proc -o ro
+mount -t tmpfs none ${ecroot}/run
