@@ -2,18 +2,78 @@ rc-update del netmount default
 chown polkitd:root $DIR/etc/polkit-1/rules.d -R
 
 if [ "$(cat /etc/passwd | grep "^user:x:")" == "" ] ; then
-useradd -M user
-c_p user user
-ug="wheel audio video users usb dialout lpadmin users kvm"
-for g in $ug ; do
-gpasswd $g -a user
+ useradd -M user
+ c_p user user
+ ug="wheel audio video users usb dialout lpadmin users kvm input"
+ for g in $ug ; do
+ gpasswd $g -a user
 done
-fi
 
 [ "$(cat /etc/group | grep xpra)" != "" ] && gpasswd xpra -a user
 [ "$(cat /etc/group | grep vboxusers)" != "" ] && gpasswd vboxusers -a user
 [ "$(cat /etc/group | grep pcap)" != "" ] && gpasswd pcap -a user
 [ "$(cat /etc/group | grep plugdev)" != "" ] && gpasswd plugdev -a user
+
+else
+
+cp /etc/passwd /etc/passwd~
+cp /etc/group /etc/group~
+cp /etc/shadow /etc/shadow~
+cp /etc/gshadow /etc/gshadow~
+cp /etc/subuid /etc/subuid~
+cp /etc/subgid /etc/subgid~
+
+V_=$(cat "/run/ofs/mount/linux/system/etc/passwd" | sed '/^root:/d')
+while read line ; do
+ ID_=$(echo $line | cut -d':' -f3)
+ (( $ID_ == 0)) && R_=$line && continue
+ (( $ID_ >= 1000 && $ID_ < 60000)) && U_="$U_
+$line"
+done < "/etc/passwd"
+
+echo "$R_" > /etc/passwd
+echo -n "$V_" >> /etc/passwd
+echo "$U_" >> /etc/passwd
+
+R_=""
+V_=$(cat "/run/ofs/mount/linux/system/etc/shadow" | sed '/^root:/d')
+U_=""
+while read line ; do
+ [ "$(echo "$line" | grep '^root:')" != "" ] && R_=$line && continue
+ H_="$(echo $line | cut -d':' -f2)"
+ [ "$H_" != "!" ] && [ "$H_" != "*" ] && U_="$U_
+$line"
+done < "/etc/shadow"
+
+echo "$R_" > /etc/shadow
+echo -n "$V_" >> /etc/shadow
+echo "$U_" >> /etc/shadow
+
+while read line ; do
+ ID_=$(echo $line | cut -d':' -f3)
+ (( $ID_ == 0)) && R_=$line && continue
+ (( $ID_ >= 1000 && $ID_ < 60000)) && G_="$G_
+$line"
+done < "/etc/group"
+
+V_=$(cat "/run/ofs/mount/linux/system/etc/group")
+echo -n "$V_" > /etc/group
+echo "$G_" >> /etc/group
+
+V_=$(cat "/run/ofs/mount/linux/system/etc/gshadow")
+echo -n "$V_" > /etc/gshadow
+echo "$G_" | sed s/"x:.*:$"/"!::"/ >> /etc/gshadow
+
+for u in $U_ ; do
+ u=$(echo $u | cut -d':' -f1)
+ val=$(cat /etc/group~ | grep $u | cut -d':' -f1)
+ for v in $val ; do
+ [ "$v" == "$u" ] && continue
+ gpasswd "$v" -a "$u"
+ done
+done
+
+fi
 
 echo "export LANG='ru_RU.utf8'" >> /etc/profile.env
 

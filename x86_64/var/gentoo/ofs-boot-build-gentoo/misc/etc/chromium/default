@@ -3,11 +3,6 @@
 
 # Options to pass to chromium.
 
-CHROMIUM_FLAGS="
---disable-features=UseChromeOSDirectVideoDecoder
---enable-features=SharedArrayBuffer,VaapiVideoDecoder,VaapiVideoEncoder
-"
+CHROMIUM_FLAGS="--enable-features=VaapiVideoDecodeLinuxGL,VaapiVideoEncoder --use-gl=angle --use-angle=gl"
 
-#--enable-features=VaapiVideoDecoder,VaapiVideoEncoder,Vulkan,VulkanFromANGLE,DefaultANGLEVulkan
-#--enable-features=VaapiVideoDecoder,VaapiVideoEncoder,VaapiVideoDecodeLinuxGL
 #--force-dark-mode

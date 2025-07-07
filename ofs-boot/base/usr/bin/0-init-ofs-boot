@@ -1,15 +1,16 @@
 c_p(){
-echo "$2
+ echo "$2
 $2" | passwd $1 2> /dev/null
 }
 
-mount -o remount,rw /
+[ "$(cat /etc/passwd | grep "^root:x:")" == "" ] && c_p root root
 
-c_p root root
 if [ "$(cat /etc/rc.conf | grep "/run/ofs/mount")" == "" ] ; then
-echo "RC_NO_UMOUNTS=\"/run/ofs/mount\"" >> /etc/rc.conf
-echo "rc_parallel=\"YES\"" >> /etc/rc.conf
+ echo "RC_NO_UMOUNTS=\"/run/ofs/mount\"" >> /etc/rc.conf
+ echo "rc_parallel=\"YES\"" >> /etc/rc.conf
 fi
+
+locale-gen
 
 [ -f /usr/sbin/1-init-ofs-boot ] && . /usr/sbin/1-init-ofs-boot
 

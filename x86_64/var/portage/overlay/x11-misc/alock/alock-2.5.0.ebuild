@@ -1,8 +1,8 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
-inherit eutils toolchain-funcs autotools
+EAPI=8
+inherit toolchain-funcs autotools
 
 DESCRIPTION="locks the local X display until a password is entered"
 HOMEPAGE="https://github.com/Arkq/alock"

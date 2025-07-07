@@ -7,4 +7,5 @@ media-tv/kodi ~arm64
 <media-plugins/kodi-inputstream-adaptive-9999 **
 
 <net-misc/streamlink-9999 **
-dev-python/versioningit ~arm64
+
+media-libs/libdisplay-info ~arm64

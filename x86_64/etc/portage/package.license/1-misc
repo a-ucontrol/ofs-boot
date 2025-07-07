@@ -2,7 +2,7 @@
 sci-visualization/xgraph xgraph
 
 sys-kernel/linux-firmware linux-fw-redistributable no-source-code
-app-emulation/virtualbox-extpack-oracle PUEL-11
+app-emulation/virtualbox-extpack-oracle PUEL-12
 www-plugins/chrome-binary-plugins google-chrome
 app-arch/unrar unRAR
 media-fonts/corefonts MSttfEULA
@@ -19,3 +19,4 @@ net-misc/asterisk-opus Digium
 net-misc/asterisk-g729 Digium
 media-libs/libva-intel-media-driver no-source-code
 net-misc/mrouted Stanford
+sys-firmware/alsa-firmware freedist

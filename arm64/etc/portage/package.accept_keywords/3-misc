@@ -6,6 +6,7 @@ net-wireless/wavemon **
 net-analyzer/nethogs **
 media-plugins/alsaequal **
 sys-auth/pam_mount **
+x11-misc/read-edid **
 
 #alsaequal
 media-plugins/caps-plugins **

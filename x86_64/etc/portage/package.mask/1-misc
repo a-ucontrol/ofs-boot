@@ -1,5 +1,2 @@
-#freecad
->sci-libs/hdf5-1.10.5-r1
-
-<dev-java/openjdk-17
->=dev-qt/qt-creator-8
+dev-java/openjdk-bin
+<dev-java/openjdk-21

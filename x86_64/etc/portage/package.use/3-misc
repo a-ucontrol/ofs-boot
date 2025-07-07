@@ -14,6 +14,10 @@ dev-lang/php cli
 app-crypt/gcr gtk
 #sway
 gui-apps/swaybg gdk-pixbuf
+#vscode
+media-libs/libcanberra gtk3
+#falkon
+kde-frameworks/purpose webengine
 
 net-libs/tox daemon dht-node
 app-emulation/spice gstreamer lz4
@@ -21,9 +25,10 @@ net-misc/spice-gtk lz4 mjpeg pulseaudio gtk3
 net-misc/xrdp fuse
 net-misc/xorgxrdp glamor
 app-office/calligra -calligra_features_sheets -calligra_features_words
-media-video/vlc live opus projectm pulseaudio
+media-video/vlc live opus projectm pulseaudio -vaapi
 sys-power/apcupsd cgi
 sys-power/nut cgi
 gui-wm/sway tray wallpapers
 media-libs/libprojectm pulseaudio
 media-sound/easyeffects -doc
+net-dns/avahi autoipd

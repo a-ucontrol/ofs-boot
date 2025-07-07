@@ -3,5 +3,3 @@ x11-libs/libdrm libkms
 
 #kodi
 dev-lang/python sqlite
-
-sys-boot/plymouth -udev

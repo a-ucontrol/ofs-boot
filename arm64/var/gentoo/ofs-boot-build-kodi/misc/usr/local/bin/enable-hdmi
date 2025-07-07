@@ -1,3 +1,0 @@
-xrandr --setprovideroutputsource 1 0
-#xrandr --output HDMI-1 --auto --right-of eDP-1 #modesetting
-xrandr --output HDMI-1-1 --auto --right-of eDP1 #nouveau, intel

@@ -1,1 +1,1 @@
-#cp --preserve ./misc-rw/* -r $RWDIR
+#cp --preserve ./misc-rw/* -r $DIR

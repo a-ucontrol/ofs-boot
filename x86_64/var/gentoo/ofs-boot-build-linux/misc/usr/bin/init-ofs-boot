@@ -2,7 +2,7 @@
 
 echo 4 > /proc/sys/kernel/printk
 
-mount -o remount,rw /
+busybox mount -o remount,rw /
 
 if [ "$(file /bin/umount | grep ELF)" != "" ] ; then
  mv /bin/umount /bin/umount.bin

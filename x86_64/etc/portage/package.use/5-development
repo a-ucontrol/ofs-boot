@@ -1,11 +1,15 @@
-app-doc/doxygen dot clang
+#texlive
+app-text/texlive-core xetex
+#qt-creator
+dev-qt/qttools designer
+#msitools
+app-arch/gcab vala
+
+app-text/doxygen dot clang
 dev-qt/qtsql postgres
 dev-embedded/libftdi tools
-sys-devel/clang llvm_targets_WebAssembly
-sys-devel/llvm llvm_targets_WebAssembly
+llvm-core/clang llvm_targets_WebAssembly
+llvm-core/llvm llvm_targets_WebAssembly
 net-libs/libsrtp openssl
 sys-devel/distcc gtk
 app-text/texlive graphics
-
-#texlive
-app-text/texlive-core xetex

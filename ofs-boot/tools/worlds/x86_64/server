@@ -1,10 +1,14 @@
 net-dns/bind
 net-mail/dovecot
-net-misc/dhcp
 net-misc/mrouted
-net-misc/pulseaudio-module-xrdp
+net-misc/pipewire-module-xrdp
 net-misc/vconfig
 net-misc/xorgxrdp
 net-misc/xrdp
 sys-power/nut
 sys-power/apcupsd
+
+dev-util/jenkins-bin
+www-apps/gitea
+
+app-crypt/easy-rsa

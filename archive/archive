@@ -1,6 +1,8 @@
 #!/bin/bash
 
-V=$(ls ../ | grep "portage-" | sed s/"portage-"// | sed s/".squashfs"//)
+V=$(ls -lah ../portage | sed s/"^.*portage-"// | sed s/".squashfs"//)
+
+echo "$V"
 
 wd=/var/gentoo
 

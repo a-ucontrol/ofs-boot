@@ -1,3 +1,5 @@
+#modules="dhclient"
+
 #modules_eth0="!netplugd"
 #config_eth0="192.168.10.10/24"
 #routes_eth0="default via 192.168.10.1"

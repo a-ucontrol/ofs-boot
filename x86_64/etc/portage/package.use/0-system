@@ -4,5 +4,8 @@ x11-libs/libdrm libkms
 #apcupsd
 sys-apps/util-linux tty-helpers
 
+#glib
+dev-libs/libpcre2 static-libs
+
 dev-lang/python sqlite
 app-i18n/ibus -X -gui

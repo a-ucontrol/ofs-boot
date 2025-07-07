@@ -3,10 +3,19 @@ app-text/kjots ~amd64
 kde-misc/latte-dock ~amd64
 media-plugins/alsaequal ~amd64
 
+net-im/telegram-desktop ~amd64
+
+net-misc/anydesk ~amd64
+
 net-libs/tox ~amd64
 net-im/skypeforlinux ~amd64
-net-misc/anydesk ~amd64
 net-misc/teamviewer ~amd64
 
-#anydesk
-=x11-libs/gtkglext-1.2.0-r5 ~amd64
+net-im/telegram-desktop ~amd64
+app-office/calligra ~amd64
+
+lxde-base/lxappearance-obconf ~amd64
+
+#firefox
+=dev-libs/nss-3.107 ~amd64
+net-im/element-desktop-bin ~amd64

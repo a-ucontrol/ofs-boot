@@ -2,9 +2,14 @@
 
 dev-lang/python:3.8
 dev-lang/python:3.9
->=dev-lang/python-3.11
+dev-lang/python:3.10
+dev-lang/python:3.11
+
+>=dev-lang/python-3.13
 
 dev-lang/ruby:2.7
 
 #x11-libs/gtk+:2
 #x11-libs/gtk+:3
+
+dev-lang/rust-bin

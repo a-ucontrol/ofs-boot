@@ -1,3 +1,5 @@
+#kwin
+x11-base/xwayland libei
 #kmail
 kde-apps/akonadi sqlite tools
 kde-apps/kdepim-addons google
@@ -8,13 +10,16 @@ dev-qt/qtmultimedia gstreamer
 dev-libs/xmlsec nss
 #chromium
 net-libs/nodejs inspector
-#plasma-telepathy-meta
-dev-libs/libpcre2 static-libs
+virtual/rust profiler
+dev-lang/rust profiler
+
+#wayland
+gui-libs/libdecor abi_x86_32
 
 app-emulation/virtualbox vnc
-net-misc/networkmanager -bluetooth -modemmanager
 kde-apps/krdc vnc
 kde-plasma/plasma-meta discover plymouth pulseaudio grub gtk
 kde-plasma/plasma-desktop touchpad emoji
 app-arch/p7zip rar -kde
 kde-plasma/discover flatpak
+net-im/telegram-desktop qt6-imageformats

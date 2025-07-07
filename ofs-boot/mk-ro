@@ -34,7 +34,7 @@ cd $CP
 fi
 
 [ "$NAME" == "" ] && NAME="gentoo"
-N="$NAME"
+[ "$RON" == "" ] && N="$NAME" || N=$RON
 
 [ -d $DIR/home/user ] && chown 1000:1000 $DIR/home/user -R
 
@@ -66,7 +66,8 @@ sed s/kv=.*$/kv=$KV/ -i $GC
 sed s/arch=.*$/arch=$A/ -i $GC
 sed s/lsystem=.*$/lsystem=system-$NAME$SN-'$arch'-$SV.squashfs/ -i $GC
 [ "$KR" != "" ] && sed s/kr=.*$/"kr=-$KR"/ -i $GC
-[ "$KN" != "" ]  && sed s/lro=.*$/lro=ro-$N-'$kv'-$KN'$kr'-'$arch'-$V.squashfs/ -i $GC || sed s/lro=.*$/lro=ro-$N-'$kv$kr'-'$arch'-$V.squashfs/ -i $GC
+[ "$KN" != "" ] && sed s/kn=.*$/"kn=-$KN"/ -i $GC
+sed s/lro=.*$/lro=ro-$N-'$kv$kr'-'$arch'-$V.squashfs/ -i $GC
 sed s/rw-overlay/rw-$NAME/ -i $GC
 
 echo "kernel: $FV"

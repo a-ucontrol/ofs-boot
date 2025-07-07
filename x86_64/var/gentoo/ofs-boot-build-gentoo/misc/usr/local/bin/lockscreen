@@ -1,1 +1,1 @@
-qdbus org.freedesktop.ScreenSaver /ScreenSaver Lock
+qdbus6 org.freedesktop.ScreenSaver /ScreenSaver Lock

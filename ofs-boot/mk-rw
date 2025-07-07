@@ -1,25 +1,28 @@
 #!/bin/bash
 
-[ "$RW_SIZE" == "" ] && RW_SIZE=128M
 
 BP=$(echo "$0" | sed s/$(basename $0)//)
 
-DIR=$PWD/rw
+RWDIR=$PWD/rw
 
 . ./env
 
+[ "$RW_SIZE" == "" ] && RW_SIZE=256M
+
 [ "$NAME" == "" ] && NAME="overlay"
 
-[ -f "$DIR/rw-$NAME.loop" ] &&  echo "File sxist! Renaming..." && sleep 5 && mv $DIR/rw-$NAME.loop $DIR/rw-$NAME.loop- || mkdir -p $DIR
+[ -f "$RWDIR/rw-$NAME.loop" ] &&  echo "File sxist! Renaming..." && sleep 5 && mv $RWDIR/rw-$NAME.loop $RWDIR/rw-$NAME.loop- || mkdir -p $RWDIR
 
-dd if=/dev/zero of=$DIR/rw-$NAME.loop bs=$RW_SIZE count=1
-mkfs.ext4 -O ^has_journal $DIR/rw-$NAME.loop
+dd if=/dev/zero of=$RWDIR/rw-$NAME.loop bs=$RW_SIZE count=1
+mkfs.ext4 -O ^has_journal $RWDIR/rw-$NAME.loop
 
 if [ -f ./rw.include ] ; then
-mount $DIR/rw-$NAME.loop $DIR
-RWDIR=$DIR/ud
-mkdir $RWDIR
+mount $RWDIR/rw-$NAME.loop $RWDIR
+DIR=$RWDIR/ud
+mkdir $DIR
+
 . ./rw.include
-[ -d $RWDIR/home/user ] && chown 1000:1000 $RWDIR/home/user -R
-umount $DIR
+
+[ -d $DIR/home/user ] && chown 1000:1000 $DIR/home/user -R
+umount $RWDIR
 fi

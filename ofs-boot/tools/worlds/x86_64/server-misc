@@ -5,6 +5,10 @@ net-misc/asterisk-core-sounds
 net-misc/asterisk-extra-sounds
 net-misc/asterisk-g729
 net-misc/asterisk-opus
-net-misc/x2goserver
 www-servers/apache
 www-servers/nginx
+net-im/synapse
+www-apps/element
+www-apps/synapse-admin
+www-apps/gitlab
+dev-vcs/gitlab-shell

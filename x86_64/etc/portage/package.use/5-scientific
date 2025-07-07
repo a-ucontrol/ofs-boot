@@ -1,13 +1,18 @@
 sci-electronics/kicad examples
+media-gfx/freecad qt6
 
 #kicad
 dev-libs/boost context python
 x11-libs/wxGTK gstreamer
 
 #freecad
-sci-libs/hdf5 unsupported
+sci-libs/hdf5 unsupported fortran cxx
 sci-libs/med python
-sci-libs/vtk boost python
+sci-libs/vtk boost -python rendering -qt5 qt6
 media-libs/tiff zstd lzma
-sci-libs/opencascade vtk json
-dev-python/pyside2 webengine
+sci-libs/opencascade vtk json -ffmpeg
+dev-python/pyside6 webengine quick uitools
+
+#opencascade
+sci-libs/cgnslib hdf5
+media-libs/simage -qt5

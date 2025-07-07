@@ -1,6 +1,4 @@
 www-apps/gitea sqlite
-www-apps/forgejo sqlite
-acct-user/git gitea
 mail-client/roundcube postgres
 
 #roundcube, cacti
@@ -15,3 +13,12 @@ net-analyzer/rrdtool graph
 #samba
 sys-libs/tevent python
 sys-libs/tdb python
+
+#gitea
+#acct-user/git gitea
+
+#gitlab
+acct-user/git gitlab -gitea
+www-apps/gitea -acct
+dev-libs/jemalloc stats
+www-apps/gitlab pages

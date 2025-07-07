@@ -4,7 +4,7 @@
 
 EAPI="7"
 
-inherit eutils unpacker
+inherit unpacker
 
 MY_P="Unigine_Heaven-${PV}"
 

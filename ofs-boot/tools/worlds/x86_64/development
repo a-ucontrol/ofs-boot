@@ -1,15 +1,8 @@
 app-editors/okteta
-app-editors/vscode
-dev-db/pgmodeler
-dev-embedded/libftdi
-dev-java/openjdk
 dev-qt/assistant
 dev-qt/linguist
-dev-qt/qt-creator
 dev-qt/qttranslations
-dev-util/ccache
-dev-util/ctags
 dev-vcs/qgit
 net-dialup/picocom
 sys-devel/distcc
-sys-libs/ncurses-compat
+dev-qt/qt-creator

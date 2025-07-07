@@ -2,6 +2,7 @@ media-plugins/kodi-inputstream-adaptive
 media-plugins/kodi-pvr-hts
 media-plugins/kodi-pvr-iptvsimple
 media-plugins/kodi-visualization-projectm
+media-plugins/kodi-visualization-fishbmc
 media-tv/kodi
 media-tv/tvheadend
 net-misc/streamlink

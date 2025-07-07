@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit desktop eutils
+inherit desktop
 
 DESCRIPTION="Free universal database tool and SQL client"
 HOMEPAGE="http://dbeaver.io/"

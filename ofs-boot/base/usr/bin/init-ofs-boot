@@ -6,10 +6,13 @@ DC=$(lspci -nn | grep '\[03')
 [ "$(echo "$DC" | grep AMD/ATI)" != "" ] && modprobe amdgpu
 [ "$(echo "$DC" | grep NVIDIA)" != "" ] && modprobe nouveau
 
+
+busybox mount -o remount,rw /
+
+
 if [ "$(cat /proc/cmdline | grep " splash")" != "" ] ; then
- /sbin/plymouthd --tty=tty16 --attach-to-session --mode=boot
+ /sbin/plymouthd --tty=tty16 --mode=boot
  plymouth show-splash
- echo -ne '\e[30m.\ec' > /dev/tty1
 fi
 
 [ -f /usr/sbin/0-init-ofs-boot ] && . /usr/sbin/0-init-ofs-boot

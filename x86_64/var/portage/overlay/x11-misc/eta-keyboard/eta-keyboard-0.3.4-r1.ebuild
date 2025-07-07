@@ -1,6 +1,6 @@
 
-EAPI=7
-inherit eutils qmake-utils
+EAPI=8
+inherit qmake-utils
 
 DESCRIPTION="Qt virtual Keyboard"
 HOMEPAGE="https://github.com/E-Tahta/eta-keyboard"

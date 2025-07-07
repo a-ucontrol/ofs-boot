@@ -2,8 +2,14 @@
 
 CP=$PWD
 
-#kernel-build --integrated-initramfs all
+. /var/gentoo/env
 
+echo "ARCH: $A"
+
+if [ "$A" == "x86_64" ] ; then
 kernel-build kernel && kernel-build "--no-ramdisk-modules --initramfs-filename=initramfs-%%KV%%.min.img initramfs" && kernel-build "--mdadm --all-ramdisk-modules --initramfs-filename=initramfs-%%KV%%.all.img initramfs" && kernel-build "--mdadm initramfs"
+elif [ "$A" == "arm64" ] ; then
+kernel-build all --no-ramdisk-modules --no-sandbox --no-microcode --kernel-target="" --no-compress-initramfs --kernel-localversion=4-arm64
+fi
 
 cd $CP

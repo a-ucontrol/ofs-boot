@@ -1,4 +1,5 @@
 #streamlink
->=media-libs/fdk-aac-2.0.0 FraunhoferFDK
+media-libs/fdk-aac FraunhoferFDK
 
 net-analyzer/nmap NPSL
+dev-embedded/rpi-eeprom rpi-eeprom

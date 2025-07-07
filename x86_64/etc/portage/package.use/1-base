@@ -2,26 +2,36 @@
 media-libs/rubberband ladspa
 #app-emulation/qemu
 sys-libs/zlib static-libs
-#x2goserver
-media-libs/mesa gles2
 #mpv
 media-libs/libva wayland
 #partitionmanager
 kde-plasma/kde-cli-tools kdesu
 #virt-manager
 net-dns/dnsmasq script
+#xpra
+dev-libs/libdbusmenu gtk3
+#openjdk
+net-libs/nodejs npm
+media-libs/opencv python
 
 sys-fs/squashfs-tools lz4 xz lzma lzo zstd
 sys-kernel/genkernel -firmware
 media-libs/freetype infinality
 x11-base/xorg-server xvfb
-dev-qt/qtnetwork -networkmanager
 media-libs/phonon -designer gstreamer -vlc
 net-misc/tigervnc server
 net-libs/glib-networking -libproxy
 kde-apps/okular djvu ebook
 media-video/mpv lua dvdnav bluray -sdl -samba libmpv wayland -vulkan
 media-video/ffmpeg quvi rtmp gnutls opus vpx x265 webp openssl
-x11-wm/xpra server pillow csc vpx webp sound pulseaudio lzo webcam brotli html pinentry xdg
+x11-wm/xpra server pillow csc vpx webp sound pulseaudio lzo webcam brotli html pinentry xdg gtk3
 www-apps/xpra-html5 brotli minify
-media-video/pipewire pipewire-alsa sound-server
+media-video/pipewire pipewire-alsa sound-server extra
+sys-boot/plymouth -udev
+dev-util/xdelta lzma
+
+
+
+app-dicts/myspell-en l10n_en-US
+dev-libs/libnl utils
+app-arch/rpm -sequoia

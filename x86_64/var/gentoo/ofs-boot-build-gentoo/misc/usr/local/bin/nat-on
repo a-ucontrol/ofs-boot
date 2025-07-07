@@ -10,12 +10,13 @@
  iptables -P OUTPUT ACCEPT
  iptables -P FORWARD DROP
 
- iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65
+# iptables -t mangle -A POSTROUTING -j TTL --ttl-set 65
 
 #-------
  export WAN=eth0
  export LAN=wlan0
  export ADDRLAN=192.168.0.0/16
+# export ADDRVPN=192.168.110.0/24
 
 #-------
  iptables -A INPUT -p TCP --dport ssh -j ACCEPT
@@ -36,6 +37,11 @@
  iptables -A FORWARD ! -i ${WAN} -s ${ADDRLAN} -j ACCEPT
  iptables -A FORWARD -i ${WAN} -d ${ADDRLAN} -j ACCEPT
  iptables -t nat -A POSTROUTING -o ${WAN} -j MASQUERADE
+
+# iptables -A FORWARD -s ${ADDRVPN} -j ACCEPT
+# iptables -A FORWARD -d ${ADDRVPN} -j ACCEPT
+
+# iptables -t nat -A POSTROUTING -o eth0 -j SNAT --to-source 192.168.1.1
 
 #---
  echo 1 > /proc/sys/net/ipv4/ip_forward

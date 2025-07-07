@@ -1,5 +1,9 @@
 dev-db/pgmodeler ~amd64
 app-editors/vscode ~amd64
+dev-qt/qt-creator ~amd64
 
-#qt-creator
-dev-qt/qtquicktimeline ~amd64
+#bear
+=net-libs/grpc-1.57.0-r1 ~amd64
+
+#jefferson
+=dev-python/cstruct-5.3 ~amd64
