@@ -1,21 +1,16 @@
+#net-im/telegram-desktop
+=dev-libs/qr-code-generator-1.8.0-r1 ~amd64
+=dev-cpp/cld3-3.0.13_p20220331 ~amd64
+=dev-cpp/expected-1.1.0 ~amd64
+=net-libs/tdlib-1.8.49_p20250510 ~amd64
+
 x11-misc/xcape ~amd64
-app-text/kjots ~amd64
-kde-misc/latte-dock ~amd64
 media-plugins/alsaequal ~amd64
-
-net-im/telegram-desktop ~amd64
-
 net-misc/anydesk ~amd64
-
 net-libs/tox ~amd64
-net-im/skypeforlinux ~amd64
 net-misc/teamviewer ~amd64
-
 net-im/telegram-desktop ~amd64
 app-office/calligra ~amd64
-
 lxde-base/lxappearance-obconf ~amd64
-
-#firefox
-=dev-libs/nss-3.107 ~amd64
 net-im/element-desktop-bin ~amd64
+media-video/simplescreenrecorder ~amd64

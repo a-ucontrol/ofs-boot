@@ -1,6 +1,7 @@
 dev-util/jenkins-bin ~amd64
 www-apps/element ~amd64
 net-misc/mrouted ~amd64
+dev-util/gitlab-cli ~amd64
 
 #gitlab
 =dev-ruby/rubygems-3.5.23 ~amd64

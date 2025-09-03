@@ -11,7 +11,7 @@ sci-libs/med python
 sci-libs/vtk boost -python rendering -qt5 qt6
 media-libs/tiff zstd lzma
 sci-libs/opencascade vtk json -ffmpeg
-dev-python/pyside6 webengine quick uitools
+dev-python/pyside webengine quick uitools
 
 #opencascade
 sci-libs/cgnslib hdf5

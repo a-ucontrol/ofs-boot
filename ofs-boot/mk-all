@@ -6,7 +6,7 @@
 
 P="../ofs-boot"
 
-$P/mk-loader
+$P/mk-loader-$ARCH
 $P/mk-ro
 RW_SIZE=512M $P/mk-rw
 mkdir -p linux/system

@@ -1,6 +1,7 @@
 app-admin/clog ~amd64
 dev-util/bdelta ~amd64
 x11-wm/xpra* ~amd64
+=net-ftp/vsftpd-3.0.5-r2 ~amd64
 
 #xpra
 =media-video/v4l2loopback-0.13.1 ~amd64

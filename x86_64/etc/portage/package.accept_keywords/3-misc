@@ -1,7 +1,7 @@
+#firefox
+dev-libs/nss ~amd64
+
 net-fs/smbnetfs ~amd64
 sys-fs/ubi_reader ~amd64
 media-video/obs-studio ~amd64
 www-client/firefox ~amd64
-
-#firefox
-=dev-libs/nss-3.102 ~amd64

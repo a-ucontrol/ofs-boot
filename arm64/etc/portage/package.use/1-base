@@ -2,7 +2,6 @@
 media-video/ffmpeg openssl
 media-libs/mesa gles2
 
-sys-boot/plymouth -udev
 sys-kernel/genkernel -firmware
 
 media-libs/libsdl2 kms

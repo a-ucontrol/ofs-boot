@@ -18,6 +18,7 @@ app-arch/rpm
 app-arch/unrar
 app-containers/docker
 app-containers/docker-cli
+app-containers/docker-registry
 app-crypt/easy-rsa
 app-crypt/seahorse
 app-editors/nano
@@ -34,6 +35,7 @@ app-emulation/virtualbox
 app-emulation/virtualbox-additions
 app-emulation/virtualbox-extpack-oracle
 app-emulation/wine-staging
+app-eselect/eselect-repository
 app-eselect/eselect-timezone
 app-misc/binwalk
 app-misc/mc
@@ -56,7 +58,7 @@ app-text/texlive
 dev-cpp/gtest
 dev-db/dbeaver-bin
 dev-db/pgmodeler
-dev-db/postgresql:14
+dev-debug/kdbg
 dev-embedded/libftdi
 dev-java/openjdk
 dev-lang/python:2.7
@@ -64,8 +66,7 @@ dev-lang/rust
 dev-libs/jemalloc
 dev-python/beautifulsoup4
 dev-python/pip
-dev-qt/assistant
-dev-qt/linguist
+dev-qt/linguist-tools
 dev-qt/qt-creator
 dev-qt/qt-docs
 dev-qt/qtcharts
@@ -80,8 +81,13 @@ dev-util/bdelta
 dev-util/bear
 dev-util/ccache
 dev-util/ctags
+dev-util/gitlab-ci-linter
+dev-util/gitlab-cli
+dev-util/gitlab-runner
 dev-util/jenkins-bin
+dev-util/kdevelop
 dev-util/patchelf
+dev-util/seer
 dev-util/uncrustify
 dev-util/vbindiff
 dev-util/xdelta
@@ -91,7 +97,6 @@ games-action/extreme-tuxracer
 games-arcade/frozen-bubble
 games-fps/gzdoom
 games-fps/unigine-heaven
-games-fps/unigine-tropics
 gui-wm/sway
 kde-apps/ark
 kde-apps/dolphin
@@ -120,7 +125,6 @@ kde-apps/kubrick
 kde-apps/kwalletmanager
 kde-apps/okular
 kde-apps/palapeli
-kde-apps/spectacle
 kde-apps/umbrello
 kde-misc/kdeconnect
 kde-misc/krename
@@ -132,11 +136,13 @@ kde-plasma/plasma-integration
 kde-plasma/plasma-meta
 kde-plasma/plasma-nm
 kde-plasma/plasma-pa
+kde-plasma/spectacle
 kde-plasma/systemsettings
 kde-plasma/wacomtablet
 lxde-base/lxappearance-obconf
 lxqt-base/lxqt-meta
 mail-client/roundcube
+mail-filter/spamassassin
 mail-mta/postfix
 media-fonts/corefonts
 media-fonts/dejavu
@@ -163,7 +169,6 @@ media-sound/pavucontrol-qt
 media-sound/pulsemixer
 media-tv/kodi
 media-tv/tvheadend
-media-video/ffmpeg
 media-video/libva-utils
 media-video/mpv
 media-video/pipewire
@@ -193,7 +198,6 @@ net-ftp/tftp-hpa
 net-ftp/vsftpd
 net-im/element-desktop-bin
 net-im/qtox
-net-im/skypeforlinux
 net-im/synapse
 net-im/telegram-desktop
 net-libs/libsrtp
@@ -286,6 +290,7 @@ x11-drivers/xf86-video-intel
 x11-libs/libnotify
 x11-misc/alock
 x11-misc/eta-keyboard
+x11-misc/obconf-qt
 x11-misc/picom
 x11-misc/sddm
 x11-misc/tint2

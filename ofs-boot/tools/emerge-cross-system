@@ -31,7 +31,7 @@ export PKGDIR=${ecroot}/var/portage/packages
 export LC_ALL=C
 
 ROOT=${ecroot} SYSROOT=${ecroot} PORTAGE_CONFIGROOT=${ecroot} emerge --jobs=32 -K --nodeps app-alternatives/awk app-alternatives/bc app-alternatives/bzip2 app-alternatives/cpio app-alternatives/gzip app-alternatives/lex app-alternatives/sh app-alternatives/tar app-alternatives/yacc app-alternatives/ninja
-ROOT=${ecroot} SYSROOT=${ecroot} PORTAGE_CONFIGROOT=${ecroot} emerge --jobs=32 -1 -K --nodeps coreutils glibc app-arch/bzip2 portage bash ncurses readline python python-exec app-arch/gzip app-arch/zstd sys-libs/zlib libffi findutils sed acl util-linux attr app-arch/tar app-crypt/libmd sys-apps/diffutils app-arch/xz-utils shadow grep libpcre sandbox openssl gcc libb2 libbsd libpcre2  ffmpeg
+ROOT=${ecroot} SYSROOT=${ecroot} PORTAGE_CONFIGROOT=${ecroot} emerge --jobs=32 -1 -K --nodeps coreutils glibc app-arch/bzip2 portage bash ncurses readline python python-exec app-arch/gzip app-arch/zstd sys-libs/zlib libffi findutils sed acl util-linux attr app-arch/tar app-crypt/libmd sys-apps/diffutils app-arch/xz-utils shadow grep libpcre sandbox openssl gcc libb2 libbsd libpcre2 ffmpeg freetype
 
 export PKGDIR=/var/portage/packages
 

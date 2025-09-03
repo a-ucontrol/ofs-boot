@@ -1,6 +1,5 @@
 app-editors/okteta
-dev-qt/assistant
-dev-qt/linguist
+dev-qt/linguist-tools
 dev-qt/qttranslations
 dev-vcs/qgit
 net-dialup/picocom

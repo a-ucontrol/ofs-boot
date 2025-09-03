@@ -4,10 +4,13 @@ dev-lang/python:3.8
 dev-lang/python:3.9
 dev-lang/python:3.10
 dev-lang/python:3.11
+dev-lang/python:3.12
 
->=dev-lang/python-3.13
+>=dev-lang/python-3.14
 
-dev-lang/ruby:2.7
+#ruby:3.2 needded for gitlab
+#dev-lang/ruby:3.2
+dev-lang/ruby:3.3
 
 #x11-libs/gtk+:2
 #x11-libs/gtk+:3

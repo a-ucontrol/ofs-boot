@@ -1,6 +1,4 @@
 app-admin/clog
-app-arch/dpkg
-app-arch/rpm
 app-arch/unrar
 app-containers/docker
 app-containers/docker-cli
@@ -16,7 +14,6 @@ media-plugins/caps-plugins
 media-plugins/swh-plugins
 media-sound/pulsemixer
 net-proxy/sshuttle
-x11-misc/virtualgl
 www-client/firefox
 x11-terms/alacritty
 x11-wm/i3
@@ -27,7 +24,6 @@ app-arch/msitools
 dev-qt/qtcharts
 
 dev-util/astyle
-
 dev-util/uncrustify
 
 kde-apps/umbrello
@@ -41,22 +37,11 @@ dev-util/bdelta
 net-misc/spice-gtk
 net-misc/tigervnc
 x11-misc/x11spice
-www-client/falkon
 
 sys-libs/ncurses-compat
 dev-db/dbeaver-bin
 dev-db/pgmodeler
 app-text/doxygen
 
-app-crypt/seahorse
-net-im/skypeforlinux
-net-misc/teamviewer
-
-kde-apps/juk
-media-sound/easyeffects
 net-im/qtox
-
-app-office/calligra
 app-office/drawio-desktop-bin
-
-sys-power/thermald

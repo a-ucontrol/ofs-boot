@@ -15,7 +15,6 @@ dev-util/bdelta
 dev-util/ccache
 kde-plasma/breeze-plymouth
 media-fonts/terminus-font
-media-libs/libprojectm:0
 media-libs/mesa
 media-plugins/alsaequal
 media-plugins/kodi-inputstream-adaptive
@@ -46,9 +45,6 @@ sys-apps/netplug
 sys-apps/uam
 sys-auth/pam_mount
 sys-block/zram-init
-sys-boot/raspberrypi-firmware
-sys-kernel/genkernel
-sys-kernel/raspberrypi-sources
 sys-process/htop
 sys-process/lsof
 virtual/cron

@@ -1,1 +1,2 @@
 sys-boot/plymouth-openrc-plugin ~amd64
+sys-devel/gcc:15 ~amd64

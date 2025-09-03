@@ -22,3 +22,5 @@ acct-user/git gitlab -gitea
 www-apps/gitea -acct
 dev-libs/jemalloc stats
 www-apps/gitlab pages
+mail-client/roundcube sqlite
+dev-lang/php sqlite

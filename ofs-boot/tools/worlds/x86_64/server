@@ -8,7 +8,8 @@ net-misc/xrdp
 sys-power/nut
 sys-power/apcupsd
 
-dev-util/jenkins-bin
-www-apps/gitea
-
+mail-filter/spamassassin
 app-crypt/easy-rsa
+mail-client/roundcube
+net-analyzer/cacti
+www-servers/apache

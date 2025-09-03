@@ -14,6 +14,8 @@ dev-libs/libdbusmenu gtk3
 net-libs/nodejs npm
 media-libs/opencv python
 
+app-dicts/myspell-en l10n_en-US
+app-i18n/ibus -X -gui
 sys-fs/squashfs-tools lz4 xz lzma lzo zstd
 sys-kernel/genkernel -firmware
 media-libs/freetype infinality
@@ -23,15 +25,13 @@ net-misc/tigervnc server
 net-libs/glib-networking -libproxy
 kde-apps/okular djvu ebook
 media-video/mpv lua dvdnav bluray -sdl -samba libmpv wayland -vulkan
-media-video/ffmpeg quvi rtmp gnutls opus vpx x265 webp openssl
+media-video/ffmpeg quvi rtmp gnutls opus vpx x265 webp openssl lame
 x11-wm/xpra server pillow csc vpx webp sound pulseaudio lzo webcam brotli html pinentry xdg gtk3
 www-apps/xpra-html5 brotli minify
 media-video/pipewire pipewire-alsa sound-server extra
 sys-boot/plymouth -udev
 dev-util/xdelta lzma
-
-
-
-app-dicts/myspell-en l10n_en-US
 dev-libs/libnl utils
 app-arch/rpm -sequoia
+mail-mta/postfix dovecot-sasl
+media-libs/freetype harfbuzz

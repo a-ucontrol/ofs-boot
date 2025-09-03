@@ -5,3 +5,5 @@ cp --preserve ./misc/* -r $DIR
 cp --preserve /usr/lib/firmware -r $DIR/usr/lib/
 cp --preserve /var/portage/overlay -r $DIR/var/portage/overlay
 cp --preserve /var/portage/patches -r $DIR/var/portage/patches
+
+#cp --preserve ./fix-$SV/* -r $DIR

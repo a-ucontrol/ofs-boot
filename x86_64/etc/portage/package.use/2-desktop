@@ -13,8 +13,8 @@ net-libs/nodejs inspector
 virtual/rust profiler
 dev-lang/rust profiler
 
-#wayland
-gui-libs/libdecor abi_x86_32
+##wayland
+#gui-libs/libdecor abi_x86_32
 
 app-emulation/virtualbox vnc
 kde-apps/krdc vnc
@@ -23,3 +23,5 @@ kde-plasma/plasma-desktop touchpad emoji
 app-arch/p7zip rar -kde
 kde-plasma/discover flatpak
 net-im/telegram-desktop qt6-imageformats
+kde-apps/akonadi-config sqlite
+kde-misc/kdeconnect telephony

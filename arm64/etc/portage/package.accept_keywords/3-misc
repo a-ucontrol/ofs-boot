@@ -1,16 +1,15 @@
-net-analyzer/iftop ~arm64
-sys-power/powertop ~arm64
-media-sound/bluez-alsa ~arm64
-
-net-wireless/wavemon **
-net-analyzer/nethogs **
-media-plugins/alsaequal **
-sys-auth/pam_mount **
-x11-misc/read-edid **
-
 #alsaequal
 media-plugins/caps-plugins **
 media-plugins/swh-plugins ~arm64
 
 #pam_mount
 sys-libs/libhx **
+
+net-analyzer/iftop ~arm64
+sys-power/powertop ~arm64
+media-sound/bluez-alsa ~arm64
+net-wireless/wavemon **
+net-analyzer/nethogs **
+media-plugins/alsaequal **
+sys-auth/pam_mount **
+x11-misc/read-edid **

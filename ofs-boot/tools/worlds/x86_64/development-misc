@@ -8,6 +8,7 @@ dev-util/patchelf
 dev-util/vbindiff
 app-misc/binwalk
 dev-util/bear
+dev-util/seer
 
 sys-fs/encfs
 net-libs/libsrtp
@@ -15,3 +16,6 @@ dev-python/beautifulsoup4
 dev-python/pip
 sys-fs/ubi_reader
 sys-fs/jefferson
+
+dev-util/kdevelop
+dev-debug/kdbg
