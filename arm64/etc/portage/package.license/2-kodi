@@ -1,0 +1,4 @@
+# required by media-video/vdr-2.6.9::gentoo
+# required by media-plugins/vdr-vnsiserver-1.8.3::overlay
+# required by vdr-vnsiserver (argument)
+>=media-fonts/corefonts-1-r7 MSttfEULA

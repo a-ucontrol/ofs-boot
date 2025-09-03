@@ -1,0 +1,1 @@
+export RUBYLIB="$(echo "$(find /usr/lib64/ruby/ -regextype egrep -iregex '.*rdoc-.*/lib')" | head -c -1 | tr '\n' ':')"

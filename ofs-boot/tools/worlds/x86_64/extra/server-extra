@@ -1,0 +1,5 @@
+net-misc/asterisk
+net-misc/asterisk-core-sounds
+net-misc/asterisk-extra-sounds
+net-misc/asterisk-g729
+net-misc/asterisk-opus

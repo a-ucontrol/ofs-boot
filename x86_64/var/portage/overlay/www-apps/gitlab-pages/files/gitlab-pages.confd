@@ -1,0 +1,22 @@
+# This is a quite old example OpenRC /etc/conf.d used in gitlab-pages.initd.
+# Read <gitlab-base-dir>/doc/administration/pages/source.md and
+# /opt/gitlab/${PN}/README.md on how to set up GitLab Pages.
+# /etc/conf.d/gitlab-pages
+
+# The address(es) to listen on for HTTPS requests
+PAGES_PORT=":9090"
+
+# The default path to file certificate to serve static page
+PAGES_ROOT_CERT="path/to/example.com.crt"
+PAGES_ROOT_KEY="path/to/example.com.key"
+
+# The directory where pages are stored
+PAGES_ROOT="/opt/gitlab/gitlab/shared/pages"
+
+# The domain to serve static pages
+PAGES_DOMAIN="example.org"
+
+# Drop privileges to this user
+PAGES_UID="gitlab-pg"
+# Drop privileges to this group
+PAGES_GID="gitlab"

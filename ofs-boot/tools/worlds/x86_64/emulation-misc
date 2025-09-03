@@ -1,0 +1,6 @@
+app-emulation/virtualbox
+app-emulation/virtualbox-additions
+app-emulation/virtualbox-extpack-oracle
+app-emulation/virt-manager
+app-emulation/virt-viewer
+app-emulation/virtio-win

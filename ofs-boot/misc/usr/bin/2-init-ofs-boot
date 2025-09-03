@@ -1,0 +1,7 @@
+if [ -d /var/lib/tvheadend ] ; then
+chown tvheadend:video /var/lib/tvheadend -R
+chown tvheadend:video /var/lib/tvh -R
+gpasswd audio -a tvheadend
+fi
+
+[ -f /usr/sbin/3-init-ofs-boot ] && . /usr/sbin/3-init-ofs-boot

@@ -1,0 +1,10 @@
+net-dns/avahi autoipd
+media-video/pipewire pipewire-alsa sound-server extra ffmpeg
+net-wireless/bluez deprecated
+media-sound/bluez-alsa hcitop
+media-tv/v4l-utils -bpf
+net-wireless/hostapd internal-tls
+media-video/mpv cli
+
+#wavemon
+dev-libs/libnl utils
