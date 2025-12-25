@@ -41,5 +41,6 @@ www-plugins/chrome-binary-plugins
 x11-apps/xinput
 x11-libs/libnotify
 
+net-im/max-desktop-bin
 net-im/telegram-desktop
 dev-qt/qtvirtualkeyboard

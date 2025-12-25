@@ -1,8 +1,7 @@
 [ "$SYS_PREFIX" == "" ] && export SYS_PREFIX="/var/gentoo/arm64/"
 
 A=arm64
-V="20250827"
-[ "$KV" == "" ] && KV="6.6.47_p20240902-raspberrypi4"
-#[ "$KV" == "" ] && KV="6.12.17-raspberrypi4"
+V="20251222"
+[ "$KV" == "" ] && KV="6.12.47-raspberrypi4"
 [ "$R" == "" ] && R=""
 [ "$SV" == "" ] && SV=""

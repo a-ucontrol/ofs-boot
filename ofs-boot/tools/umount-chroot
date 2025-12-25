@@ -1,5 +1,8 @@
 #!/bin/bash
 
+. ./env
+
+[ "$ecroot" == ""  ] && ecroot="$SYS_PREFIX/var/gentoo/system-gentoo"
 [ "$ecroot" == ""  ] && ecroot="/var/gentoo/system-gentoo"
 
 umount ${ecroot}/run

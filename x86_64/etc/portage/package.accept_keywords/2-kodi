@@ -1,2 +1,3 @@
 net-misc/streamlink ~amd64
 media-plugins/kodi-* ~amd64
+=media-tv/kodi-22.0_alpha2 **

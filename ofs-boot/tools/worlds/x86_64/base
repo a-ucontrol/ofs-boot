@@ -107,3 +107,6 @@ net-fs/curlftpfs
 net-fs/nfs-utils
 sys-kernel/genkernel
 sys-process/btop
+
+media-sound/alsa-tools
+x11-apps/xhost

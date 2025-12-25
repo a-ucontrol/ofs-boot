@@ -8,6 +8,7 @@ app-eselect/eselect-timezone
 app-misc/mc
 app-misc/screen
 app-portage/eix
+app-portage/gentoolkit
 dev-lang/python:2.7
 dev-python/dbus-python
 dev-python/pygobject
@@ -45,6 +46,12 @@ sys-apps/netplug
 sys-apps/uam
 sys-auth/pam_mount
 sys-block/zram-init
+sys-boot/grub
+sys-boot/raspberrypi-firmware
+sys-fs/squashfs-tools
+sys-kernel/genkernel
+sys-kernel/raspberrypi-sources
+sys-kernel/raspberrypi-sources:6.12.9999
 sys-process/htop
 sys-process/lsof
 virtual/cron

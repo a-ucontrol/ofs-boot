@@ -1,0 +1,12 @@
+www-servers/nginx
+net-im/synapse
+www-apps/element
+www-apps/synapse-admin
+www-apps/gitlab
+dev-vcs/gitlab-shell
+dev-util/jenkins-bin
+www-apps/gitea
+
+dev-util/gitlab-runner
+dev-util/gitlab-ci-linter
+dev-util/gitlab-cli

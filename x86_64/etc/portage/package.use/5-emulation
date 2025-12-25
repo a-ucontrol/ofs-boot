@@ -10,6 +10,7 @@ dev-util/mingw64-toolchain abi_x86_32
 dev-libs/libpcre static-libs
 sys-apps/attr static-libs
 dev-libs/glib static-libs
+virtual/zlib static-libs
 
 #libvirt
 net-libs/gnutls tools pkcs11

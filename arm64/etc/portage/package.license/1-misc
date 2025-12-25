@@ -3,3 +3,4 @@ media-libs/fdk-aac FraunhoferFDK
 
 net-analyzer/nmap NPSL
 dev-embedded/rpi-eeprom rpi-eeprom
+sys-boot/raspberrypi-firmware raspberrypi-videocore-bin

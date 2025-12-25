@@ -1,2 +1,5 @@
+[Daemon]
+LockOnStart=true
+
 [Greeter][Wallpaper][org.kde.image][General]
 Image=file:///usr/share/wallpapers/FlyingKonqui/contents/images/1920x1080.png

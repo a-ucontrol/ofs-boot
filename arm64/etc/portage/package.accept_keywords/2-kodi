@@ -1,29 +1,6 @@
-media-tv/kodi ~arm64
-
-<media-plugins/kodi-pvr-hts-9999 **
-<media-plugins/kodi-pvr-iptvsimple-9999 **
-<media-plugins/kodi-visualization-fishbmc-9999 **
-<media-plugins/kodi-visualization-projectm-9999 **
-<media-plugins/kodi-inputstream-adaptive-9999 **
+=media-tv/kodi-22.0_alpha1 **
+media-plugins/kodi-* ~arm64
 
 <net-misc/streamlink-9999 **
 
 media-libs/libdisplay-info ~arm64
-
-# required by =media-plugins/kodi-pvr-vdr-vnsi-21.1.0 (argument)
-=media-plugins/kodi-pvr-vdr-vnsi-21.1.0 **
-# required by vdr-iptv (argument)
-=media-plugins/vdr-iptv-2.4.0 **
-# required by media-tv/gentoo-vdr-scripts-3.0_rc2-r1::gentoo
-# required by media-plugins/vdr-vnsiserver-1.8.3::overlay
-# required by vdr-vnsiserver (argument)
-=sys-process/wait_on_pid-0.0.2-r2 ~arm64
-# required by media-plugins/vdr-vnsiserver-1.8.3::overlay
-# required by vdr-vnsiserver (argument)
-=media-video/vdr-2.6.9 ~arm64
-# required by media-plugins/vdr-vnsiserver-1.8.3::overlay
-# required by vdr-vnsiserver (argument)
-=media-tv/gentoo-vdr-scripts-3.0_rc2-r1 ~arm64
-# required by media-plugins/vdr-iptv-2.4.0::gentoo
-# required by vdr-iptv (argument)
-=app-eselect/eselect-vdr-0.0.4 ~arm64

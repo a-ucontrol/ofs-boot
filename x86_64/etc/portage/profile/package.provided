@@ -1,4 +1,4 @@
 #sys-kernel/linux-firmware-20250708
 #sys-firmware/sof-firmware-2025.01
-#app-emulation/virtualbox-modules-7.1.12
-#media-video/v4l2loopback-0.13.1
+#app-emulation/virtualbox-modules-7.2.4
+#media-video/v4l2loopback-0.15.1

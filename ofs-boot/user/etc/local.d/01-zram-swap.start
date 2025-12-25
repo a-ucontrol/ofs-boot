@@ -1,0 +1,4 @@
+modprobe zram
+zramctl /dev/zram0 --algorithm zstd --size 2G
+mkswap /dev/zram0
+swapon /dev/zram0

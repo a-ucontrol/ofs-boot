@@ -18,6 +18,7 @@ app-arch/rpm
 app-arch/unrar
 app-containers/docker
 app-containers/docker-cli
+app-containers/docker-compose
 app-containers/docker-registry
 app-crypt/easy-rsa
 app-crypt/seahorse
@@ -60,7 +61,6 @@ dev-db/dbeaver-bin
 dev-db/pgmodeler
 dev-debug/kdbg
 dev-embedded/libftdi
-dev-java/openjdk
 dev-lang/python:2.7
 dev-lang/rust
 dev-libs/jemalloc
@@ -70,8 +70,6 @@ dev-qt/linguist-tools
 dev-qt/qt-creator
 dev-qt/qt-docs
 dev-qt/qtcharts
-dev-qt/qttranslations
-dev-qt/qttranslations:5
 dev-qt/qtvirtualkeyboard
 dev-texlive/texlive-latex
 dev-texlive/texlive-latexextra
@@ -162,6 +160,7 @@ media-plugins/kodi-pvr-iptvsimple
 media-plugins/kodi-visualization-fishbmc
 media-plugins/kodi-visualization-projectm
 media-plugins/swh-plugins
+media-sound/alsa-tools
 media-sound/alsa-utils
 media-sound/easyeffects
 media-sound/elisa
@@ -174,6 +173,7 @@ media-video/mpv
 media-video/pipewire
 media-video/simplescreenrecorder
 media-video/smplayer
+media-video/v4l2loopback
 media-video/vlc
 net-analyzer/cacti
 net-analyzer/iftop
@@ -197,6 +197,8 @@ net-ftp/filezilla
 net-ftp/tftp-hpa
 net-ftp/vsftpd
 net-im/element-desktop-bin
+net-im/jitsi-meet-desktop-bin
+net-im/max-desktop-bin
 net-im/qtox
 net-im/synapse
 net-im/telegram-desktop
@@ -249,7 +251,6 @@ sys-boot/plymouth-openrc-plugin
 sys-devel/distcc
 sys-firmware/sof-firmware
 sys-fs/dosfstools
-sys-fs/encfs
 sys-fs/exfat-utils
 sys-fs/jefferson
 sys-fs/mdadm
@@ -259,6 +260,8 @@ sys-fs/simple-mtpfs
 sys-fs/squashfs-tools
 sys-fs/ubi_reader
 sys-kernel/genkernel
+sys-kernel/gentoo-sources
+sys-kernel/gentoo-sources:6.12.41
 sys-kernel/linux-firmware
 sys-libs/ncurses-compat
 sys-power/acpid
@@ -272,7 +275,6 @@ sys-process/htop
 sys-process/lsof
 www-apps/element
 www-apps/gitea
-www-apps/gitlab
 www-apps/synapse-admin
 www-apps/xpra-html5
 www-client/chromium
@@ -283,6 +285,7 @@ www-servers/apache
 www-servers/nginx
 x11-apps/mesa-progs
 x11-apps/setxkbmap
+x11-apps/xhost
 x11-apps/xinput
 x11-apps/xrandr
 x11-base/xorg-server

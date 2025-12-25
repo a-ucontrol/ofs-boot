@@ -1,3 +1,11 @@
+app-arch/unrar
 dev-java/openjdk
 net-ftp/tftp-hpa
 sys-apps/xinetd
+
+app-containers/docker
+app-containers/docker-cli
+app-containers/docker-compose
+app-containers/docker-registry
+
+sys-libs/ncurses-compat

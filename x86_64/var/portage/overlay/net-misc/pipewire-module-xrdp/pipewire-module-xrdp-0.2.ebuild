@@ -1,43 +1,28 @@
-# Copyright 2017 Gentoo Foundation
+# Copyright 2023-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=7
+EAPI=8
 
-inherit autotools systemd
+inherit autotools xdg
 
-DESCRIPTION="xrdp sink / source pulseaudio modules"
-HOMEPAGE="http://www.xrdp.org/"
+DESCRIPTION="PipeWire module which enables xrdp to use audio redirection"
+HOMEPAGE="https://github.com/neutrinolabs/pipewire-module-xrdp"
+SRC_URI="https://github.com/neutrinolabs/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
-PULSE_VER="12.2"
-SRC_URI="
-	https://github.com/neutrinolabs/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://freedesktop.org/software/pulseaudio/releases/pulseaudio-${PULSE_VER}.tar.xz
-"
-
-LICENSE="Apache-2.0"
+LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
-RESTRICT="mirror"
+KEYWORDS="amd64"
 
-RDEPEND="
-	net-misc/xrdp:0=
-	>=media-sound/pulseaudio-${PULSE_VER}
-"
+DEPEND="media-video/pipewire:="
+RDEPEND="${DEPEND}"
+BDEPEND="virtual/pkgconfig"
 
 src_prepare() {
 	default
-	./bootstrap
-	cd ../pulseaudio-${PULSE_VER} || die
-	./configure
-}
-
-src_configure() {
-	econf PULSE_DIR=${WORKDIR}/pulseaudio-${PULSE_VER}
+	eautoreconf
 }
 
 src_install() {
 	default
-	prune_libtool_files --all
+	find "${ED}" -name "*.la" -delete || die
 }
-

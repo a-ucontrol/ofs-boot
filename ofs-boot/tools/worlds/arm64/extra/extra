@@ -1,0 +1,7 @@
+sys-kernel/raspberrypi-sources
+=sys-kernel/raspberrypi-sources-6.6.47_p20240902
+sys-boot/raspberrypi-firmware
+sys-kernel/genkernel
+app-portage/gentoolkit
+sys-boot/grub
+sys-fs/squashfs-tools

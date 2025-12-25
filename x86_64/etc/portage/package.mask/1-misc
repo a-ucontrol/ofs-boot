@@ -3,3 +3,6 @@
 
 dev-java/openjdk-bin
 <dev-java/openjdk-21
+
+#jenkins
+>=dev-java/openjdk-22

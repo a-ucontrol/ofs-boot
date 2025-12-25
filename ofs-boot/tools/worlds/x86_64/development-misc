@@ -10,7 +10,6 @@ app-misc/binwalk
 dev-util/bear
 dev-util/seer
 
-sys-fs/encfs
 net-libs/libsrtp
 dev-python/beautifulsoup4
 dev-python/pip

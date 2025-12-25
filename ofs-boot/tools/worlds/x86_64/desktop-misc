@@ -10,3 +10,10 @@ app-office/joplin-desktop
 lxde-base/lxappearance-obconf
 lxqt-base/lxqt-meta
 net-im/element-desktop-bin
+
+media-plugins/alsaequal
+media-plugins/caps-plugins
+media-plugins/swh-plugins
+
+media-sound/easyeffects
+net-im/jitsi-meet-desktop-bin

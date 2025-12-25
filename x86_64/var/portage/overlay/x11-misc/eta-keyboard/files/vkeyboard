@@ -5,5 +5,5 @@ KP=$(ps aux | grep eta-keyboard | grep -v grep)
 if [ "$KP" == "" ] ; then
 /usr/bin/eta-keyboard show &
 else
-qdbus org.eta.virtualkeyboard /VirtualKeyboard toggle
+qdbus6 org.eta.virtualkeyboard /VirtualKeyboard toggle
 fi
