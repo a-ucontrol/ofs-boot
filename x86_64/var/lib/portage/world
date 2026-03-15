@@ -24,7 +24,6 @@ app-crypt/easy-rsa
 app-crypt/seahorse
 app-editors/nano
 app-editors/neovim
-app-editors/okteta
 app-editors/vim
 app-editors/vscode
 app-emulation/spice-html5
@@ -205,18 +204,12 @@ net-im/telegram-desktop
 net-libs/libsrtp
 net-mail/dovecot
 net-misc/anydesk
-net-misc/asterisk
-net-misc/asterisk-core-sounds
-net-misc/asterisk-extra-sounds
-net-misc/asterisk-g729
-net-misc/asterisk-opus
 net-misc/bridge-utils
 net-misc/dhcp
 net-misc/mrouted
 net-misc/pipewire-module-xrdp
 net-misc/spice-gtk
 net-misc/streamlink
-net-misc/teamviewer
 net-misc/tigervnc
 net-misc/vconfig
 net-misc/xorgxrdp

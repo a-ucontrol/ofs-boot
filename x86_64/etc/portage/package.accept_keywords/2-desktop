@@ -19,3 +19,8 @@ app-office/calligra ~amd64
 lxde-base/lxappearance-obconf ~amd64
 net-im/element-desktop-bin ~amd64
 media-video/simplescreenrecorder ~amd64
+
+#powerdevil
+=dev-libs/plasma-wayland-protocols-1.20.0 ~amd64
+
+=media-gfx/krita-6.0.0_beta3 ~amd64

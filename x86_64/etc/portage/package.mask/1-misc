@@ -6,3 +6,6 @@ dev-java/openjdk-bin
 
 #jenkins
 >=dev-java/openjdk-22
+
+#dev-python/pyside-6.10.2
+>=dev-python/wheel-0.46

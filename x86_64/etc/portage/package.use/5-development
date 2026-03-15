@@ -5,7 +5,7 @@ dev-qt/qttools designer
 #msitools
 app-arch/gcab vala
 
-app-text/doxygen dot clang
+app-text/doxygen dot clang gui
 dev-qt/qtsql postgres
 dev-embedded/libftdi tools
 llvm-core/clang llvm_targets_WebAssembly

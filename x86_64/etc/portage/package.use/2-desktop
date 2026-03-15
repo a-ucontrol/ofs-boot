@@ -18,10 +18,18 @@ dev-lang/rust profiler
 
 app-emulation/virtualbox vnc
 kde-apps/krdc vnc
-kde-plasma/plasma-meta discover plymouth pulseaudio grub gtk
+kde-plasma/plasma-meta discover plymouth pulseaudio grub gtk virtualkeyboard
 kde-plasma/plasma-desktop touchpad emoji
 app-arch/p7zip rar -kde
 kde-plasma/discover flatpak
 net-im/telegram-desktop qt6-imageformats
 kde-apps/akonadi-config sqlite
 kde-misc/kdeconnect telephony
+
+#kde-frameworks/kdnssd
+>=net-dns/avahi-0.9_rc2-r3 mdnsresponder-compat
+
+#chromium
+>=dev-lang/rust-1.92.0_p1-r1 rustfmt
+
+=app-text/poppler-25.12.0 qt5
