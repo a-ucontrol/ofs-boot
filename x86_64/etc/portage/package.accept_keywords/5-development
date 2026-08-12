@@ -3,6 +3,10 @@ app-editors/vscode ~amd64
 dev-qt/qt-creator ~amd64
 dev-util/seer ~amd64
 dev-debug/kdbg ~amd64
+app-editors/okteta ~amd64
+
+#qt-creator
+=dev-qt/qttasktree-6.11.1 ~amd64
 
 #jefferson
-=dev-python/cstruct-6.1 ~amd64
+dev-python/cstruct ~amd64

@@ -10,10 +10,10 @@ app-alternatives/cpio
 app-alternatives/lex
 app-alternatives/ninja
 app-alternatives/yacc
+app-arch/7zip
 app-arch/dpkg
 app-arch/lzip
 app-arch/msitools
-app-arch/p7zip
 app-arch/rpm
 app-arch/unrar
 app-containers/docker
@@ -24,6 +24,7 @@ app-crypt/easy-rsa
 app-crypt/seahorse
 app-editors/nano
 app-editors/neovim
+app-editors/okteta
 app-editors/vim
 app-editors/vscode
 app-emulation/spice-html5
@@ -65,7 +66,6 @@ dev-lang/rust
 dev-libs/jemalloc
 dev-python/beautifulsoup4
 dev-python/pip
-dev-qt/linguist-tools
 dev-qt/qt-creator
 dev-qt/qt-docs
 dev-qt/qtcharts
@@ -254,7 +254,6 @@ sys-fs/squashfs-tools
 sys-fs/ubi_reader
 sys-kernel/genkernel
 sys-kernel/gentoo-sources
-sys-kernel/gentoo-sources:6.12.41
 sys-kernel/linux-firmware
 sys-libs/ncurses-compat
 sys-power/acpid
@@ -285,7 +284,6 @@ x11-base/xorg-server
 x11-drivers/xf86-video-intel
 x11-libs/libnotify
 x11-misc/alock
-x11-misc/eta-keyboard
 x11-misc/obconf-qt
 x11-misc/picom
 x11-misc/sddm

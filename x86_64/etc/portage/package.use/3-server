@@ -13,6 +13,7 @@ net-analyzer/rrdtool graph
 #samba
 sys-libs/tevent python
 sys-libs/tdb python
+net-libs/ngtcp2 gnutls
 
 #gitea
 #acct-user/git gitea

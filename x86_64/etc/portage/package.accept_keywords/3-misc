@@ -1,5 +1,9 @@
 #firefox
 dev-libs/nss ~amd64
+www-client/firefox-l10n ~amd64
+
+#ubi_reader
+=dev-python/lzallright-0.2.6 ~amd64
 
 net-fs/smbnetfs ~amd64
 sys-fs/ubi_reader ~amd64

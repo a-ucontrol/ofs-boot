@@ -12,7 +12,7 @@ app-arch/rpm
 app-admin/logrotate
 app-admin/sudo
 app-admin/syslog-ng
-app-arch/p7zip
+app-arch/7zip
 app-editors/nano
 app-eselect/eselect-repository
 app-eselect/eselect-timezone

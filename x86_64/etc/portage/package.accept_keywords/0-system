@@ -1,2 +1,3 @@
 sys-boot/plymouth-openrc-plugin ~amd64
 #sys-kernel/gentoo-sources ~amd64
+sys-devel/gcc:16
